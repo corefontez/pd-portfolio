@@ -12,6 +12,9 @@
 const loader = document.getElementById('loader');
 const loaderBar = document.querySelector('.loader-bar');
 
+// Nav starts hidden — will animate in after loader
+gsap.set('#nav', { y: -24, opacity: 0 });
+
 // Animate bar fill, then reveal page
 gsap.to(loaderBar, {
   width: '100%',
@@ -25,11 +28,26 @@ gsap.to(loaderBar, {
       delay: 0.15,
       onComplete: () => {
         loader.style.display = 'none';
+        navReveal();
         heroReveal();
       }
     });
   }
 });
+
+/* ============================================================
+   NAV — entrance animation (top → down, smooth + premium)
+   ============================================================ */
+
+function navReveal() {
+  gsap.to('#nav', {
+    y: 0,
+    opacity: 1,
+    duration: 0.9,
+    ease: 'power3.out',
+    delay: 0.05
+  });
+}
 
 /* ============================================================
    CUSTOM CURSOR
@@ -105,7 +123,6 @@ function heroReveal() {
 
 function initSplitText(selector) {
   document.querySelectorAll(selector).forEach(el => {
-    const original = el.innerHTML;
     const words = el.textContent.trim().split(/\s+/);
 
     el.innerHTML = words.map(w =>
