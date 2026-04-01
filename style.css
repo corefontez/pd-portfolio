@@ -1,33 +1,67 @@
 /* ============================================================
    DESIGN SYSTEM — Izabel Fontes Portfolio
+   Color Architecture v2 — Orange · Lime · Purple
    ============================================================ */
 
 :root {
-  /* Colors */
-  --bg:          #0D0D0D;
-  --bg-surface:  #141414;
-  --bg-card:     #1C1C1C;
-  --text:        #ECEAE4;
-  --text-sec:    #7C7A76;
-  --text-muted:  #484644;
-  --accent:      #F97316;
-  --accent-low:  rgba(249, 115, 22, 0.08);
-  --accent-dim:  rgba(249, 115, 22, 0.25);
-  --border:      #252525;
+  /* === BASE SURFACES === */
+  --bg:           #0D0D0D;
+  --bg-surface:   #111111;
+  --bg-card:      #181818;
+
+  /* === TEXT === */
+  --text:         #ECEAE4;
+  --text-sec:     #7C7A76;
+  --text-muted:   #3E3C3A;
+  --border:       #222222;
+
+  /* -------------------------------------------------------
+     PRIMARY — ORANGE
+     Main brand color. Use for primary emphasis, active
+     states, key highlights, selected UI moments.
+  ------------------------------------------------------- */
+  --orange:       #F97316;
+  --orange-dim:   rgba(249, 115, 22, 0.20);
+  --orange-low:   rgba(249, 115, 22, 0.07);
+  --orange-glow:  rgba(249, 115, 22, 0.30);
+
+  /* Semantic alias — keeps existing usage intact */
+  --accent:       var(--orange);
+  --accent-dim:   var(--orange-dim);
+  --accent-low:   var(--orange-low);
+
+  /* -------------------------------------------------------
+     LIME GREEN — MICRO ACCENT / SIGNAL
+     Sparingly. Status, availability, hover micro-details,
+     small badges, subtle interaction signals.
+  ------------------------------------------------------- */
+  --lime:         #A3E635;
+  --lime-dim:     rgba(163, 230, 53, 0.16);
+  --lime-low:     rgba(163, 230, 53, 0.06);
+
+  /* -------------------------------------------------------
+     PURPLE — DEPTH / ATMOSPHERE
+     Richness, contrast, dimensionality. Subtle glows,
+     atmospheric gradients, visual depth, section texture.
+  ------------------------------------------------------- */
+  --purple:       #8B5CF6;
+  --purple-dim:   rgba(139, 92, 246, 0.16);
+  --purple-low:   rgba(139, 92, 246, 0.06);
+  --purple-atm:   rgba(46, 16, 100, 0.55);
 
   /* Typography */
-  --font:        'Archivo', sans-serif;
-  --font-mono:   'DM Mono', monospace;
+  --font:         'Archivo', sans-serif;
+  --font-mono:    'DM Mono', monospace;
 
   /* Spacing (8pt scale) */
-  --s1:  8px;
-  --s2:  16px;
-  --s3:  24px;
-  --s4:  32px;
-  --s5:  48px;
-  --s6:  64px;
-  --s7:  80px;
-  --s8:  120px;
+  --s1:   8px;
+  --s2:   16px;
+  --s3:   24px;
+  --s4:   32px;
+  --s5:   48px;
+  --s6:   64px;
+  --s7:   80px;
+  --s8:   120px;
 
   /* Border radius */
   --r1:  4px;
@@ -95,12 +129,14 @@ img {
 
 /* ============================================================
    CURSOR
+   Purple at rest — orange on hover. Reflects the hierarchy:
+   purple = ambient presence, orange = active state.
    ============================================================ */
 
 #cursor {
   width: 8px;
   height: 8px;
-  background: var(--accent);
+  background: var(--orange);
   border-radius: 50%;
   position: fixed;
   top: 0;
@@ -122,7 +158,7 @@ img {
 #cursor-follower {
   width: 40px;
   height: 40px;
-  border: 1px solid var(--accent-dim);
+  border: 1px solid var(--purple-dim);
   border-radius: 50%;
   position: fixed;
   top: 0;
@@ -138,7 +174,7 @@ img {
 #cursor-follower.hovering {
   width: 64px;
   height: 64px;
-  border-color: rgba(249, 115, 22, 0.12);
+  border-color: var(--orange-dim);
 }
 
 /* ============================================================
@@ -179,7 +215,7 @@ img {
   left: 0;
   width: 0%;
   height: 100%;
-  background: var(--accent);
+  background: var(--orange);
 }
 
 /* ============================================================
@@ -208,7 +244,7 @@ img {
               border-color 0.35s ease;
 }
 
-/* Compact island */
+/* Compact island — subtle purple tint on the border */
 #nav.scrolled {
   top: 12px;
   left: 28px;
@@ -218,7 +254,7 @@ img {
   background: rgba(13, 13, 13, 0.92);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border-color: var(--border);
+  border-color: rgba(139, 92, 246, 0.12);
 }
 
 /* --- Left: identity --- */
@@ -292,7 +328,7 @@ img {
   opacity: 0;
 }
 
-/* Email: hidden → slides in */
+/* Email: hidden → slides in. Lime hover — micro interaction signal */
 .nav-email {
   font-size: 0.66rem;
   color: var(--text-sec);
@@ -306,7 +342,7 @@ img {
               color var(--t-fast);
 }
 
-.nav-email:hover { color: var(--accent); }
+.nav-email:hover { color: var(--lime); }
 
 #nav.scrolled .nav-email {
   max-width: 250px;
@@ -352,15 +388,15 @@ img {
 }
 
 .btn-nav:hover {
-  background: var(--accent);
-  border-color: var(--accent);
+  background: var(--orange);
+  border-color: var(--orange);
   color: #fff;
 }
 
-/* Button turns orange when compact */
+/* Button fills orange when compact island */
 #nav.scrolled .btn-nav {
-  background: var(--accent);
-  border-color: var(--accent);
+  background: var(--orange);
+  border-color: var(--orange);
   color: #fff;
 }
 
@@ -395,6 +431,8 @@ img {
 
 /* ============================================================
    HERO
+   Subtle purple atmospheric gradient top-right corner.
+   Adds depth and atmosphere without distracting from content.
    ============================================================ */
 
 #hero {
@@ -404,6 +442,10 @@ img {
   flex-direction: column;
   justify-content: space-between;
   gap: var(--s5);
+  position: relative;
+  background:
+    radial-gradient(ellipse 55% 50% at 88% 5%, rgba(139, 92, 246, 0.07) 0%, transparent 65%),
+    var(--bg);
 }
 
 .hero-meta {
@@ -413,24 +455,27 @@ img {
   color: var(--text-sec);
 }
 
+/* "Available for work" — lime signals availability status */
 .hero-available {
   display: flex;
   align-items: center;
   gap: var(--s1);
-  color: var(--text-sec);
+  color: var(--lime);
 }
 
+/* Status dot — lime. This is a live signal, not decoration. */
 .status-dot {
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: var(--accent);
+  background: var(--lime);
+  box-shadow: 0 0 8px var(--lime-dim);
   animation: pulse 2s ease-in-out infinite;
 }
 
 @keyframes pulse {
   0%, 100% { opacity: 1; transform: scale(1); }
-  50%       { opacity: 0.4; transform: scale(0.7); }
+  50%       { opacity: 0.45; transform: scale(0.65); }
 }
 
 .hero-title {
@@ -499,7 +544,7 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
-  background: var(--accent);
+  background: var(--orange);
   animation: scrollDrop 1.8s var(--ease-in) infinite;
 }
 
@@ -510,6 +555,7 @@ img {
 
 /* ============================================================
    MARQUEE STRIP
+   Orange separators remain primary brand punctuation.
    ============================================================ */
 
 .marquee-strip {
@@ -538,7 +584,7 @@ img {
 }
 
 .marquee-track .sep {
-  color: var(--accent);
+  color: var(--orange);
   font-size: 1rem;
   line-height: 1;
 }
@@ -578,7 +624,7 @@ section {
 }
 
 /* ============================================================
-   WORKS — photo strip (fotos passando)
+   WORKS — photo strip
    ============================================================ */
 
 .works-strip-wrap {
@@ -617,11 +663,12 @@ section {
   transform: scale(1.04);
 }
 
+/* Project type badges — orange. Strong brand signal. */
 .strip-card-label {
   position: absolute;
   top: var(--s1);
   right: var(--s1);
-  background: var(--accent);
+  background: var(--orange);
   color: #fff;
   font-family: var(--font-mono);
   font-size: 0.58rem;
@@ -640,10 +687,10 @@ section {
 }
 
 /* Project placeholder backgrounds */
-.northe-bg  { background: linear-gradient(135deg, #0e1e2e 0%, #1a3a5c 100%); }
+.northe-bg    { background: linear-gradient(135deg, #0e1e2e 0%, #1a3a5c 100%); }
 .universal-bg { background: linear-gradient(135deg, #1e0e08 0%, #3d1e0a 100%); }
-.nft-bg     { background: linear-gradient(135deg, #0e0818 0%, #250d40 100%); }
-.pipa-bg    { background: linear-gradient(135deg, #041814 0%, #0a3028 100%); }
+.nft-bg       { background: linear-gradient(135deg, #0e0818 0%, #250d40 100%); }
+.pipa-bg      { background: linear-gradient(135deg, #041814 0%, #0a3028 100%); }
 
 /* ============================================================
    WORKS — project list
@@ -661,12 +708,12 @@ section {
   padding: var(--s4) 0;
   border-bottom: 1px solid var(--border);
   position: relative;
-  transition: padding-left var(--t-med) var(--ease);
   opacity: 0;
   transform: translateY(20px);
   transition: opacity var(--t-slow) var(--ease),
               transform var(--t-slow) var(--ease),
-              padding-left var(--t-med) var(--ease);
+              padding-left var(--t-med) var(--ease),
+              background var(--t-med);
 }
 
 .work-row.visible {
@@ -674,6 +721,7 @@ section {
   transform: translateY(0);
 }
 
+/* Orange left edge — primary brand accent on active hover */
 .work-row::before {
   content: '';
   position: absolute;
@@ -681,7 +729,7 @@ section {
   top: 0;
   bottom: 0;
   width: 2px;
-  background: var(--accent);
+  background: var(--orange);
   transform: scaleY(0);
   transform-origin: bottom;
   transition: transform var(--t-med) var(--ease);
@@ -689,6 +737,7 @@ section {
 
 .work-row:hover {
   padding-left: var(--s3);
+  background: rgba(139, 92, 246, 0.025);
 }
 
 .work-row:hover::before {
@@ -743,7 +792,7 @@ section {
 
 .work-row:hover .work-arrow {
   transform: translate(4px, -4px);
-  color: var(--accent);
+  color: var(--orange);
 }
 
 /* Hover image preview */
@@ -775,10 +824,21 @@ section {
 
 /* ============================================================
    SERVICES
+   Purple atmospheric left-edge gradient adds section depth.
+   Orange bottom accent on hover = primary engagement signal.
    ============================================================ */
 
 #services {
   background: var(--bg-surface);
+  position: relative;
+}
+
+#services::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 45% 65% at 0% 50%, rgba(139, 92, 246, 0.05) 0%, transparent 60%);
+  pointer-events: none;
 }
 
 .services-grid {
@@ -788,6 +848,8 @@ section {
   border: 1px solid var(--border);
   border-radius: var(--r2);
   overflow: hidden;
+  position: relative;
+  z-index: 1;
 }
 
 .service-card {
@@ -796,7 +858,6 @@ section {
   flex-direction: column;
   gap: var(--s3);
   background: var(--bg-surface);
-  transition: background var(--t-med);
   position: relative;
   overflow: hidden;
   opacity: 0;
@@ -811,6 +872,7 @@ section {
   transform: translateY(0);
 }
 
+/* Orange bottom accent — primary emphasis on hover */
 .service-card::after {
   content: '';
   position: absolute;
@@ -818,14 +880,14 @@ section {
   left: 0;
   right: 0;
   height: 2px;
-  background: var(--accent);
+  background: var(--orange);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform var(--t-slow) var(--ease);
 }
 
 .service-card:hover {
-  background: var(--bg-card);
+  background: linear-gradient(145deg, rgba(139, 92, 246, 0.05) 0%, var(--bg-card) 55%);
 }
 
 .service-card:hover::after {
@@ -860,7 +922,7 @@ section {
 
 .service-card:hover .service-arrow {
   transform: translate(4px, -4px);
-  color: var(--accent);
+  color: var(--orange);
 }
 
 /* ============================================================
@@ -897,9 +959,10 @@ section {
   line-height: 1;
 }
 
+/* Orange superscript — primary brand moment on data */
 .stat-num::after {
   content: '+';
-  color: var(--accent);
+  color: var(--orange);
   font-size: 0.6em;
   vertical-align: super;
 }
@@ -929,6 +992,7 @@ section {
   flex-direction: column;
 }
 
+/* Lime hover — micro interaction detail on tool items */
 .tools-list li {
   font-size: 0.88rem;
   color: var(--text-sec);
@@ -944,12 +1008,14 @@ section {
 }
 
 .tools-list li:hover {
-  color: var(--text);
+  color: var(--lime);
   padding-left: var(--s1);
 }
 
 /* ============================================================
    CONTACT
+   Strong purple atmospheric gradient — this section marks
+   a tonal shift, inviting action in a more immersive space.
    ============================================================ */
 
 #contact {
@@ -959,6 +1025,9 @@ section {
   justify-content: center;
   text-align: center;
   border-top: 1px solid var(--border);
+  background:
+    radial-gradient(ellipse 75% 60% at 50% 100%, var(--purple-atm) 0%, transparent 65%),
+    var(--bg);
 }
 
 .contact-inner {
@@ -985,17 +1054,18 @@ section {
   color: var(--text-sec);
 }
 
+/* CTA — orange border, orange fill on hover */
 .contact-cta {
   display: inline-flex;
   align-items: center;
   gap: var(--s2);
   margin-top: var(--s3);
   padding: 15px 36px;
-  border: 1px solid var(--accent);
+  border: 1px solid var(--orange);
   border-radius: var(--r1);
   font-size: 0.95rem;
   font-weight: 500;
-  color: var(--accent);
+  color: var(--orange);
   position: relative;
   overflow: hidden;
   letter-spacing: 0.01em;
@@ -1004,7 +1074,7 @@ section {
 .contact-cta-bg {
   position: absolute;
   inset: 0;
-  background: var(--accent);
+  background: var(--orange);
   transform: translateY(101%);
   transition: transform var(--t-med) var(--ease);
 }
@@ -1028,7 +1098,7 @@ section {
   z-index: 1;
   transition: transform var(--t-med) var(--ease),
               color var(--t-med);
-  color: var(--accent);
+  color: var(--orange);
 }
 
 .contact-cta:hover .contact-arrow {
@@ -1063,7 +1133,7 @@ footer {
 }
 
 .footer-links a:hover {
-  color: var(--accent);
+  color: var(--orange);
 }
 
 /* ============================================================
