@@ -12,10 +12,9 @@
 const loader = document.getElementById('loader');
 const loaderBar = document.querySelector('.loader-bar');
 
-// Nav starts hidden — will animate in after loader
+// Nav starts hidden — animates in after loader
 gsap.set('#nav', { y: -24, opacity: 0 });
 
-// Animate bar fill, then reveal page
 gsap.to(loaderBar, {
   width: '100%',
   duration: 1.1,
@@ -36,7 +35,7 @@ gsap.to(loaderBar, {
 });
 
 /* ============================================================
-   NAV — entrance animation (top → down, smooth + premium)
+   NAV — entrance animation
    ============================================================ */
 
 function navReveal() {
@@ -71,7 +70,7 @@ document.addEventListener('mousemove', e => {
 })();
 
 // Hover states
-document.querySelectorAll('a, button, .service-card, .work-row').forEach(el => {
+document.querySelectorAll('a, button, .bento-card, .work-item').forEach(el => {
   el.addEventListener('mouseenter', () => {
     cursor.classList.add('hovering');
     follower.classList.add('hovering');
@@ -83,7 +82,7 @@ document.querySelectorAll('a, button, .service-card, .work-row').forEach(el => {
 });
 
 /* ============================================================
-   NAV — scroll behavior
+   NAV — scroll: compact pill + name→email crossfade
    ============================================================ */
 
 const nav = document.getElementById('nav');
@@ -102,7 +101,6 @@ function heroReveal() {
     el.classList.add('visible');
   });
 
-  // Fade in hero meta and desc
   gsap.fromTo('#hero .hero-meta, #hero .hero-foot', {
     opacity: 0,
     y: 16
@@ -117,8 +115,7 @@ function heroReveal() {
 }
 
 /* ============================================================
-   SPLIT TEXT — generic scroll-triggered word reveal
-   Splits any element with [data-split] into word spans
+   SPLIT TEXT — scroll-triggered word reveal
    ============================================================ */
 
 function initSplitText(selector) {
@@ -132,8 +129,7 @@ function initSplitText(selector) {
     const io = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (!entry.isIntersecting) return;
-        const inners = entry.target.querySelectorAll('.split-inner');
-        inners.forEach((inner, i) => {
+        entry.target.querySelectorAll('.split-inner').forEach((inner, i) => {
           inner.style.transitionDelay = `${i * 0.06}s`;
           inner.classList.add('visible');
         });
@@ -145,48 +141,45 @@ function initSplitText(selector) {
   });
 }
 
-// Apply to section titles and about body
 initSplitText('.section-title');
-initSplitText('.about-body');
+
+// Contact title already has manual split structure with <em> — reveal via observer
+const contactTitleObs = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    entry.target.querySelectorAll('.split-inner').forEach((inner, i) => {
+      inner.style.transitionDelay = `${i * 0.12 + 0.3}s`;
+      inner.classList.add('visible');
+    });
+    contactTitleObs.unobserve(entry.target);
+  });
+}, { threshold: 0.2 });
+
+const contactTitle = document.querySelector('.contact-title');
+if (contactTitle) contactTitleObs.observe(contactTitle);
 
 /* ============================================================
-   WORK ROWS — staggered reveal
+   WORK ITEMS — staggered scroll reveal
+   Items start invisible (opacity: 0, translateY) via CSS,
+   and transition to visible on scroll in.
    ============================================================ */
 
-const workRows = document.querySelectorAll('.work-row');
+const workItems = document.querySelectorAll('.work-item');
 
 const workObs = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (!entry.isIntersecting) return;
-    workRows.forEach((row, i) => {
-      setTimeout(() => row.classList.add('visible'), i * 90);
+    workItems.forEach((item, i) => {
+      setTimeout(() => item.classList.add('visible'), i * 110);
     });
     workObs.disconnect();
   });
-}, { threshold: 0.1 });
+}, { threshold: 0.08 });
 
-if (workRows.length) workObs.observe(workRows[0]);
-
-/* ============================================================
-   SERVICE CARDS — staggered reveal
-   ============================================================ */
-
-const serviceCards = document.querySelectorAll('.service-card');
-
-const serviceObs = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (!entry.isIntersecting) return;
-    serviceCards.forEach((card, i) => {
-      setTimeout(() => card.classList.add('visible'), i * 120);
-    });
-    serviceObs.disconnect();
-  });
-}, { threshold: 0.1 });
-
-if (serviceCards.length) serviceObs.observe(serviceCards[0]);
+if (workItems.length) workObs.observe(workItems[0]);
 
 /* ============================================================
-   TEXT SCRAMBLE — hover effect on project titles
+   TEXT SCRAMBLE — hover effect on work item titles
    ============================================================ */
 
 class TextScramble {
@@ -234,20 +227,49 @@ class TextScramble {
   }
 }
 
-document.querySelectorAll('.work-title').forEach(el => {
+document.querySelectorAll('.work-item-title').forEach(el => {
   const scramble = new TextScramble(el);
-  const row = el.closest('.work-row');
-  if (row) {
-    row.addEventListener('mouseenter', () => scramble.run());
-    row.addEventListener('mouseleave', () => scramble.reset());
+  const item = el.closest('.work-item');
+  if (item) {
+    item.addEventListener('mouseenter', () => scramble.run());
+    item.addEventListener('mouseleave', () => scramble.reset());
   }
 });
 
 /* ============================================================
-   COUNTER ANIMATION — stats in about section
+   BENTO GRID — staggered scroll reveal
+   Each card reveals with a cascading delay based on position.
    ============================================================ */
 
-const counters = document.querySelectorAll('.stat-num[data-count]');
+const bentoCards = document.querySelectorAll('.bento-card');
+
+// Set initial state
+bentoCards.forEach(card => {
+  card.style.opacity = '0';
+  card.style.transform = 'translateY(22px)';
+  card.style.transition = 'opacity 0.7s cubic-bezier(0.16,1,0.3,1), transform 0.7s cubic-bezier(0.16,1,0.3,1), border-color 0.35s ease, background 0.35s ease';
+});
+
+const bentoObs = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    bentoCards.forEach((card, i) => {
+      setTimeout(() => {
+        card.style.opacity = '1';
+        card.style.transform = 'translateY(0)';
+      }, i * 75);
+    });
+    bentoObs.disconnect();
+  });
+}, { threshold: 0.06 });
+
+if (bentoCards.length) bentoObs.observe(bentoCards[0]);
+
+/* ============================================================
+   STAT COUNTER — animates on scroll into view
+   ============================================================ */
+
+const counters = document.querySelectorAll('.bento-stat-num[data-count]');
 
 const counterObs = new IntersectionObserver(entries => {
   entries.forEach(entry => {
@@ -260,7 +282,6 @@ const counterObs = new IntersectionObserver(entries => {
     const tick = (now) => {
       const elapsed = now - startTime;
       const progress = Math.min(elapsed / duration, 1);
-      // Ease out cubic
       const eased = 1 - Math.pow(1 - progress, 3);
       entry.target.textContent = Math.floor(eased * target);
 
@@ -279,36 +300,68 @@ const counterObs = new IntersectionObserver(entries => {
 counters.forEach(c => counterObs.observe(c));
 
 /* ============================================================
-   GENERIC FADE-UP REVEAL — for any .reveal element
+   CONTACT SECTION — split text reveal on scroll
    ============================================================ */
 
-const revealEls = document.querySelectorAll('.reveal');
-
-const revealObs = new IntersectionObserver(entries => {
+const contactObs = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (!entry.isIntersecting) return;
-    entry.target.classList.add('visible');
-    revealObs.unobserve(entry.target);
-  });
-}, { threshold: 0.1, rootMargin: '0px 0px -48px 0px' });
 
-revealEls.forEach(el => {
+    const eyebrow = entry.target.querySelector('.contact-eyebrow');
+    const cta     = entry.target.querySelector('.contact-cta');
+    const emailCta = entry.target.querySelector('.contact-email-cta');
+
+    if (eyebrow) {
+      gsap.fromTo(eyebrow,
+        { opacity: 0, y: 12 },
+        { opacity: 1, y: 0, duration: 0.6, ease: 'power3.out', delay: 0.2 }
+      );
+    }
+    if (emailCta) {
+      gsap.fromTo(emailCta,
+        { opacity: 0, y: 16 },
+        { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out', delay: 0.55 }
+      );
+    }
+    if (cta) {
+      gsap.fromTo(cta,
+        { opacity: 0, y: 16 },
+        { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out', delay: 0.7 }
+      );
+    }
+
+    contactObs.disconnect();
+  });
+}, { threshold: 0.15 });
+
+const contactSection = document.getElementById('contact');
+if (contactSection) contactObs.observe(contactSection);
+
+// Initial hidden state for contact elements
+const contactEls = document.querySelectorAll('.contact-eyebrow, .contact-email-cta, .contact-cta');
+contactEls.forEach(el => {
   el.style.opacity = '0';
-  el.style.transform = 'translateY(28px)';
-  el.style.transition = 'opacity 0.75s cubic-bezier(0.16,1,0.3,1), transform 0.75s cubic-bezier(0.16,1,0.3,1)';
-  revealObs.observe(el);
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-  revealEls.forEach(el => {
-    revealObs.observe(el);
-  });
-});
+/* ============================================================
+   PARALLAX — subtle scroll movement on hero orbs
+   ============================================================ */
 
-// Patch: add .visible transition state
-const style = document.createElement('style');
-style.textContent = `.reveal.visible { opacity: 1 !important; transform: translateY(0) !important; }`;
-document.head.appendChild(style);
+const orb1 = document.querySelector('.hero-orb-1');
+const orb2 = document.querySelector('.hero-orb-2');
+
+window.addEventListener('scroll', () => {
+  if (!orb1 && !orb2) return;
+  const scrollY = window.scrollY;
+  const factor = Math.min(scrollY / window.innerHeight, 1);
+
+  if (orb1) {
+    orb1.style.transform = `translate(${factor * -2}%, ${factor * 8}%) scale(${1 + factor * 0.05})`;
+  }
+  if (orb2) {
+    orb2.style.transform = `translate(${factor * 3}%, ${factor * -5}%) scale(${1 + factor * 0.03})`;
+  }
+}, { passive: true });
 
 /* ============================================================
    REDUCED MOTION — disable animations if user prefers
@@ -319,11 +372,16 @@ if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     el.style.transition = 'none';
     el.classList.add('visible');
   });
-  document.querySelectorAll('.work-row, .service-card').forEach(el => {
+  document.querySelectorAll('.work-item').forEach(el => {
     el.style.transition = 'none';
     el.classList.add('visible');
     el.style.opacity = '1';
     el.style.transform = 'none';
+  });
+  bentoCards.forEach(card => {
+    card.style.transition = 'none';
+    card.style.opacity = '1';
+    card.style.transform = 'none';
   });
   if (loader) {
     loader.style.display = 'none';

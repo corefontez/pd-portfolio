@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +9,7 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500;1,600&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,400&family=Mansalva&display=swap" rel="stylesheet">
 
   <!-- GSAP -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
@@ -35,28 +35,32 @@
   <div id="cursor-follower"></div>
 
   <!-- ============================================================
-       NAV
+       NAV — links LEFT · name CENTER · CTA RIGHT
        ============================================================ -->
   <nav id="nav">
 
-    <!-- Left: foto + nome (expanded) → foto + email (scrolled) -->
-    <div class="nav-identity">
-      <div class="nav-photo">
-        <!-- TROQUE src pela sua foto, ex: ./assets/photo.jpg -->
-        <img src="" alt="Izabel Fontes">
-      </div>
-      <span class="nav-name">Izabel Fontes</span>
-      <a href="mailto:fontez.izabel@gmail.com" class="nav-email mono">fontez.izabel@gmail.com</a>
-    </div>
-
-    <!-- Centro: links -->
+    <!-- Left: navigation links -->
     <ul class="nav-links">
       <li><a href="#works">Works</a></li>
-      <li><a href="#services">Services</a></li>
       <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
 
-    <!-- Direita: só o botão -->
+    <!-- Center: photo + name → email on scroll -->
+    <div class="nav-center">
+      <div class="nav-brand">
+        <div class="nav-photo">
+          <!-- Replace src with your photo path, e.g. ./assets/photo.jpg -->
+          <img src="images/izzy.png" alt="Izabel Fontes">
+        </div>
+        <div class="nav-text-swap">
+          <span class="nav-name">Izabel Fontes</span>
+          <a href="mailto:fontez.izabel@gmail.com" class="nav-email mono">fontez.izabel@gmail.com</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: CTA -->
     <div class="nav-right">
       <a href="mailto:fontez.izabel@gmail.com" class="btn-nav">Let's talk</a>
     </div>
@@ -69,6 +73,11 @@
          HERO
          ============================================================ -->
     <section id="hero">
+
+      <!-- Atmospheric orbs -->
+      <div class="hero-orb hero-orb-1" aria-hidden="true"></div>
+      <div class="hero-orb hero-orb-2" aria-hidden="true"></div>
+
       <div class="hero-meta">
         <span class="mono">Digital Product Designer</span>
         <span class="hero-available mono">
@@ -77,296 +86,306 @@
         </span>
       </div>
 
-      <h1 class="hero-title">
-        <span class="split-line">
-          <span class="split-inner">Strategic</span>
-        </span>
-        <span class="split-line line-indent">
-          <span class="split-inner">UX <em>&amp;</em> UI</span>
-        </span>
-        <span class="split-line line-italic">
-          <span class="split-inner">for impactful</span>
-        </span>
-        <span class="split-line line-indent">
-          <span class="split-inner">digital <em>products</em></span>
-        </span>
-      </h1>
+      <div class="hero-body">
+        <h1 class="hero-title">
+          <span class="split-line">
+            <span class="split-inner">Strategic</span>
+          </span>
+          <span class="split-line line-indent">
+            <span class="split-inner">UX <em>&amp;</em> UI</span>
+          </span>
+          <span class="split-line line-italic">
+            <span class="split-inner">for impactful</span>
+          </span>
+          <span class="split-line line-indent">
+            <span class="split-inner">digital <em>products</em></span>
+          </span>
+        </h1>
 
-      <div class="hero-foot">
-        <p class="hero-desc">
-          Designing experiences that connect brands to people — with clarity, intention, and craft.
-        </p>
         <div class="hero-scroll">
           <span class="mono">scroll</span>
           <div class="scroll-track"></div>
         </div>
       </div>
+
+      <div class="hero-foot">
+        <p class="hero-desc">
+Creating digital experiences that balance structure, storytelling, and interaction in meaningful ways.        </p>
+      </div>
+
     </section>
 
-    <!-- ============================================================
+     <!-- ============================================================
          MARQUEE STRIP
          ============================================================ -->
     <div class="marquee-strip">
       <div class="marquee-track">
-        <span>UX / UI Design</span>
+        <span>Strategic Thinking</span>
         <span class="sep">·</span>
-        <span>Web Experiences</span>
+        <span>Visual Design</span>
         <span class="sep">·</span>
-        <span>Mobile</span>
+        <span>Photography</span>
         <span class="sep">·</span>
-        <span>Available for work</span>
+        <span>45+ Cities</span>
         <span class="sep">·</span>
-        <span>Figma</span>
+        <span>4 Continents</span>
+        <span class="sep">·</span>
+        <span>São Paulo</span>
+        <span class="sep">·</span>
+        <span>Framer Developer</span>
+        <span class="sep">·</span>
+        <span>Available for Work</span>
         <span class="sep">·</span>
         <span>UX Research</span>
         <span class="sep">·</span>
-        <span>Prototyping</span>
+        <span>Product Design</span>
         <span class="sep">·</span>
-        <span>Design Systems</span>
+        <span>Multidisciplinary</span>
         <span class="sep">·</span>
         <!-- duplicate for seamless loop -->
-        <span>UX / UI Design</span>
+        <span>Strategic Thinking</span>
         <span class="sep">·</span>
-        <span>Web Experiences</span>
+        <span>Visual Design</span>
         <span class="sep">·</span>
-        <span>Mobile</span>
+        <span>Photography</span>
         <span class="sep">·</span>
-        <span>Available for work</span>
+        <span>45+ Cities</span>
         <span class="sep">·</span>
-        <span>Figma</span>
+        <span>4 Continents</span>
+        <span class="sep">·</span>
+        <span>São Paulo</span>
+        <span class="sep">·</span>
+        <span>Framer Developer</span>
+        <span class="sep">·</span>
+        <span>Available for Work</span>
         <span class="sep">·</span>
         <span>UX Research</span>
         <span class="sep">·</span>
-        <span>Prototyping</span>
+        <span>Product Design</span>
         <span class="sep">·</span>
-        <span>Design Systems</span>
+        <span>Multidisciplinary</span>
         <span class="sep">·</span>
       </div>
-    </div>
+    </div> 
 
     <!-- ============================================================
-         WORKS
+         WORKS — editorial showcase, 3 projects
          ============================================================ -->
     <section id="works">
-      <div class="section-header">
+      <div class="works-heading-wrap">
         <span class="section-num mono">01</span>
-        <h2 class="section-title">Selected Works</h2>
+        <h2 class="section-title">design in action_</h2>
       </div>
 
-      <!-- Photos passing strip -->
-      <div class="works-strip-wrap">
-        <div class="works-strip">
-          <div class="strip-card">
-            <div class="strip-card-img northe-bg"></div>
-            <span class="strip-card-label">APP</span>
-            <span class="strip-card-name mono">Northe Empreendimentos</span>
-          </div>
-          <div class="strip-card">
-            <div class="strip-card-img universal-bg"></div>
-            <span class="strip-card-label">WEBSITE</span>
-            <span class="strip-card-name mono">Universal Project</span>
-          </div>
-          <div class="strip-card">
-            <div class="strip-card-img nft-bg"></div>
-            <span class="strip-card-label">FIGMA</span>
-            <span class="strip-card-name mono">NFT Project</span>
-          </div>
-          <div class="strip-card">
-            <div class="strip-card-img pipa-bg"></div>
-            <span class="strip-card-label">APP</span>
-            <span class="strip-card-name mono">Pipa Coastal Reserve</span>
-          </div>
-          <!-- duplicates for seamless loop -->
-          <div class="strip-card">
-            <div class="strip-card-img northe-bg"></div>
-            <span class="strip-card-label">APP</span>
-            <span class="strip-card-name mono">Northe Empreendimentos</span>
-          </div>
-          <div class="strip-card">
-            <div class="strip-card-img universal-bg"></div>
-            <span class="strip-card-label">WEBSITE</span>
-            <span class="strip-card-name mono">Universal Project</span>
-          </div>
-          <div class="strip-card">
-            <div class="strip-card-img nft-bg"></div>
-            <span class="strip-card-label">FIGMA</span>
-            <span class="strip-card-name mono">NFT Project</span>
-          </div>
-          <div class="strip-card">
-            <div class="strip-card-img pipa-bg"></div>
-            <span class="strip-card-label">APP</span>
-            <span class="strip-card-name mono">Pipa Coastal Reserve</span>
-          </div>
-        </div>
-      </div>
+      <div class="works-showcase">
 
-      <!-- Project list -->
-      <div class="works-list">
-        <a href="#" class="work-row">
-          <div class="work-row-left">
-            <span class="work-num mono">01</span>
-            <div class="work-info">
-              <h3 class="work-title">Northe Empreendimentos</h3>
-              <p class="work-sub">Real estate app experience</p>
+        <!-- Work 01 -->
+        <a href="#" class="work-item" style="--item-glow: rgba(26, 58, 92, 0.18)">
+          <span class="work-item-bg-num" aria-hidden="true">01</span>
+          <div class="work-item-visual northe-bg" aria-hidden="true"></div>
+          <div class="work-item-fade" aria-hidden="true"></div>
+          <div class="work-item-track">
+            <span class="work-item-num mono">01</span>
+            <div class="work-item-info">
+              <h3 class="work-item-title">Northe Empreendimentos</h3>
+              <p class="work-item-sub">Real estate app experience</p>
+              <div class="work-tools">
+                <span class="work-tool mono">Figma</span>
+                <span class="work-tool mono">Framer</span>
+                <span class="work-tool mono">VS Code</span>
+              </div>
             </div>
-          </div>
-          <div class="work-row-right">
-            <span class="work-tag mono">APP</span>
-            <span class="work-arrow">↗</span>
-          </div>
-          <div class="work-preview">
-            <div class="work-preview-inner northe-bg"></div>
+            <div class="work-item-meta">
+              <span class="work-item-tag mono">APP</span>
+              <span class="work-item-arrow">↗</span>
+            </div>
           </div>
         </a>
 
-        <a href="#" class="work-row">
-          <div class="work-row-left">
-            <span class="work-num mono">02</span>
-            <div class="work-info">
-              <h3 class="work-title">Universal Project</h3>
-              <p class="work-sub">Full website design &amp; design system</p>
+        <!-- Work 02 -->
+        <a href="#" class="work-item" style="--item-glow: rgba(61, 30, 10, 0.22)">
+          <span class="work-item-bg-num" aria-hidden="true">02</span>
+          <div class="work-item-visual universal-bg" aria-hidden="true"></div>
+          <div class="work-item-fade" aria-hidden="true"></div>
+          <div class="work-item-track">
+            <span class="work-item-num mono">02</span>
+            <div class="work-item-info">
+              <h3 class="work-item-title">Universal Project</h3>
+              <p class="work-item-sub">Full website design &amp; design system</p>
+              <div class="work-tools">
+                <span class="work-tool mono">Figma</span>
+                <span class="work-tool mono">Framer</span>
+                <span class="work-tool mono">VS Code</span>
+              </div>
             </div>
-          </div>
-          <div class="work-row-right">
-            <span class="work-tag mono">WEBSITE</span>
-            <span class="work-arrow">↗</span>
-          </div>
-          <div class="work-preview">
-            <div class="work-preview-inner universal-bg"></div>
+            <div class="work-item-meta">
+              <span class="work-item-tag mono">WEBSITE</span>
+              <span class="work-item-arrow">↗</span>
+            </div>
           </div>
         </a>
 
-        <a href="#" class="work-row">
-          <div class="work-row-left">
-            <span class="work-num mono">03</span>
-            <div class="work-info">
-              <h3 class="work-title">NFT Project</h3>
-              <p class="work-sub">Web3 design &amp; Figma components</p>
+        <!-- Work 03 -->
+        <a href="#" class="work-item" style="--item-glow: rgba(10, 48, 40, 0.22)">
+          <span class="work-item-bg-num" aria-hidden="true">03</span>
+          <div class="work-item-visual pipa-bg" aria-hidden="true"></div>
+          <div class="work-item-fade" aria-hidden="true"></div>
+          <div class="work-item-track">
+            <span class="work-item-num mono">03</span>
+            <div class="work-item-info">
+              <h3 class="work-item-title">Pipa Coastal Reserve</h3>
+              <p class="work-item-sub">Travel &amp; hospitality app</p>
+              <div class="work-tools">
+                <span class="work-tool mono">Figma</span>
+                <span class="work-tool mono">Framer</span>
+                <span class="work-tool mono">VS Code</span>
+              </div>
             </div>
-          </div>
-          <div class="work-row-right">
-            <span class="work-tag mono">FIGMA</span>
-            <span class="work-arrow">↗</span>
-          </div>
-          <div class="work-preview">
-            <div class="work-preview-inner nft-bg"></div>
+            <div class="work-item-meta">
+              <span class="work-item-tag mono">APP</span>
+              <span class="work-item-arrow">↗</span>
+            </div>
           </div>
         </a>
 
-        <a href="#" class="work-row">
-          <div class="work-row-left">
-            <span class="work-num mono">04</span>
-            <div class="work-info">
-              <h3 class="work-title">Pipa Coastal Reserve</h3>
-              <p class="work-sub">Travel &amp; hospitality app</p>
-            </div>
-          </div>
-          <div class="work-row-right">
-            <span class="work-tag mono">APP</span>
-            <span class="work-arrow">↗</span>
-          </div>
-          <div class="work-preview">
-            <div class="work-preview-inner pipa-bg"></div>
-          </div>
-        </a>
       </div>
     </section>
 
-    <!-- ============================================================
-         SERVICES
-         ============================================================ -->
-    <section id="services">
-      <div class="section-header">
-        <span class="section-num mono">02</span>
-        <h2 class="section-title">What I do</h2>
-      </div>
-
-      <div class="services-grid">
-        <div class="service-card">
-          <span class="service-idx mono">01</span>
-          <h3 class="service-name">UX / UI Design</h3>
-          <p class="service-desc">
-            From research and wireframes to polished interfaces — building products people actually want to use.
-          </p>
-          <span class="service-arrow">↗</span>
-        </div>
-
-        <div class="service-card">
-          <span class="service-idx mono">02</span>
-          <h3 class="service-name">Web Experiences</h3>
-          <p class="service-desc">
-            Design-led web projects with attention to motion, typography, and visual storytelling.
-          </p>
-          <span class="service-arrow">↗</span>
-        </div>
-
-        <div class="service-card">
-          <span class="service-idx mono">03</span>
-          <h3 class="service-name">Mobile</h3>
-          <p class="service-desc">
-            iOS and Android apps designed with platform-native intuition and a strong visual identity.
-          </p>
-          <span class="service-arrow">↗</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================================================
-         ABOUT
-         ============================================================ -->
     <section id="about">
       <div class="section-header">
-        <span class="section-num mono">03</span>
-        <h2 class="section-title">About me</h2>
+        <span class="section-num mono">02</span>
+        <h2 class="section-title">behind the screens_</h2>
       </div>
 
-      <div class="about-grid">
-        <div class="about-left">
-          <p class="about-body">
-            I'm Izabel — a digital product designer crafting strategic UX &amp; UI for products that matter. I combine design thinking with a strong visual language to create interfaces that are both functional and memorable.
-          </p>
-          <div class="about-stats reveal">
-            <div class="stat">
-              <span class="stat-num" data-count="4">0</span>
-              <span class="stat-label mono">Years of<br>experience</span>
-            </div>
-            <div class="stat">
-              <span class="stat-num" data-count="20">0</span>
-              <span class="stat-label mono">Projects<br>delivered</span>
-            </div>
-            <div class="stat">
-              <span class="stat-num" data-count="12">0</span>
-              <span class="stat-label mono">Happy<br>clients</span>
-            </div>
-          </div>
-        </div>
+    <div class="bento-grid">
+      
 
-        <div class="tools-card reveal">
-          <span class="tools-label mono">Tools &amp; stack</span>
-          <ul class="tools-list">
-            <li>Figma</li>
-            <li>Framer</li>
-            <li>Notion</li>
-            <li>ProtoPie</li>
-            <li>Adobe Suite</li>
-          </ul>
+  <!-- about me_ -->
+  <div class="bento-card bento-about">
+    <span class="bento-card-label mono">about me_</span>
+    <div class="bento-about-body">
+      <p class="bento-bio-text">Hello there! I'm Izzy :) Glad you're here!</p>
+
+<p class="bento-bio-text">I’ve been designing websites and apps for 4+ years, across strategy, UX, visual design, and handoff. Good work, but I kept getting curious about what happened after the file left my hands.</p>
+
+<p class="bento-bio-text">So I started building the things myself. With Framer, Webflow, code, and AI tools — and now, with a mix of all of them I’m still figuring out.</p>
+
+<p class="bento-bio-text bento-aside">Turns out the line between “designer who builds” and “builder who designs” is much blurrier than anyone told me.</p>
+
+<p class="bento-bio-text">What I’m doing now feels less like a job description and more like an ongoing experiment: how much of a product can one person own, from architecture to live URL, when the tools keep getting better at closing the gap?</p>
+
+<p class="bento-bio-text">I don’t have a clean answer yet. But I’ve shipped enough to know the question is worth asking.</p>
+    </div>
+  </div>
+
+  <!-- background_ -->
+  <div class="bento-card bento-background">
+    <span class="bento-card-label mono">background_</span>
+    <div class="bento-bg-list">
+      <p class="bento-bg-item">Background in Social Communication & Photography</p>
+      <p class="bento-bg-item">Traveled through 45+ cities across four continents</p>
+      <p class="bento-bg-item">Currently teaching Portuguese and English</p>
+    </div>
+  </div>
+
+  <!-- photos -->
+  <div class="bento-card bento-photos">
+    <div class="bento-photo-strip">
+      <div class="bento-photo-item"><img src="" alt="Travel photo 1"></div>
+      <div class="bento-photo-item"><img src="" alt="Travel photo 2"></div>
+      <div class="bento-photo-item"><img src="" alt="Travel photo 3"></div>
+      <div class="bento-photo-item"><img src="" alt="Travel photo 4"></div>
+
+      <!-- duplicated for seamless loop -->
+      <div class="bento-photo-item"><img src="" alt="Travel photo 1 duplicate"></div>
+      <div class="bento-photo-item"><img src="" alt="Travel photo 2 duplicate"></div>
+      <div class="bento-photo-item"><img src="" alt="Travel photo 3 duplicate"></div>
+      <div class="bento-photo-item"><img src="" alt="Travel photo 4 duplicate"></div>
+    </div>
+  </div>
+
+  <!-- experiences_ -->
+  <div class="bento-card bento-experiences">
+    <div class="bento-exp-header">
+      <span class="bento-card-label mono">experiences_</span>
+      <span class="bento-exp-avail"><span class="status-dot"></span> Available for work</span>
+    </div>
+    <div class="bento-exp-list">
+      <div class="bento-exp-item">
+        <span class="bento-exp-year mono">2024–25</span>
+        <div>
+          <p class="bento-exp-role">Product Designer · Framer Dev</p>
+          <p class="bento-exp-co">Productalk</p>
         </div>
       </div>
-    </section>
+      <div class="bento-exp-item">
+        <span class="bento-exp-year mono">2023–24</span>
+        <div>
+          <p class="bento-exp-role">Product Designer</p>
+          <p class="bento-exp-co">Yolo Coliving</p>
+        </div>
+      </div>
+      <div class="bento-exp-item">
+        <span class="bento-exp-year mono">2022</span>
+        <div>
+          <p class="bento-exp-role">UX/UI Designer</p>
+          <p class="bento-exp-co">Ikone – Global Social League</p>
+        </div>
+      </div>
+      <div class="bento-exp-item">
+        <span class="bento-exp-year mono">2021–</span>
+        <div>
+          <p class="bento-exp-role">Freelance Product Designer</p>
+          <p class="bento-exp-co">Independent</p>
+        </div>
+      </div>
+    </div>
+  </div>
 
+  <!-- design & web development tool stacks_ -->
+  <div class="bento-card bento-tools-row">
+    <span class="bento-card-label mono">design & web development tool stacks_</span>
+    <div class="bento-logos">
+      <div class="bento-logo"><img src="" alt="Tool logo 1"></div>
+      <div class="bento-logo"><img src="" alt="Tool logo 2"></div>
+      <div class="bento-logo"><img src="" alt="Tool logo 3"></div>
+      <div class="bento-logo"><img src="" alt="Tool logo 4"></div>
+      <div class="bento-logo"><img src="" alt="Tool logo 5"></div>
+      <div class="bento-logo"><img src="" alt="Tool logo 6"></div>
+    </div>
+  </div>
+
+  <!-- AI tool stacks_ -->
+  <div class="bento-card bento-ai-tools-row">
+    <span class="bento-card-label mono">AI tool stacks_</span>
+    <div class="bento-logos">
+      <div class="bento-logo"><img src="" alt="AI tool logo 1"></div>
+      <div class="bento-logo"><img src="" alt="AI tool logo 2"></div>
+      <div class="bento-logo"><img src="" alt="AI tool logo 3"></div>
+      <div class="bento-logo"><img src="" alt="AI tool logo 4"></div>
+      <div class="bento-logo"><img src="" alt="AI tool logo 5"></div>
+      <div class="bento-logo"><img src="" alt="AI tool logo 6"></div>
+    </div>
+  </div>
+
+</div>
     <!-- ============================================================
-         CONTACT
+         CONTACT — premium closing CTA
          ============================================================ -->
     <section id="contact">
+      <div class="contact-atmosphere" aria-hidden="true"></div>
+
       <div class="contact-inner">
-        <span class="contact-eyebrow mono">Let's work together</span>
+        <span class="contact-eyebrow mono">reach out and let the magic of collaboration happen</span>
+
         <h2 class="contact-title">
           <span class="split-line"><span class="split-inner">Got a project</span></span>
           <span class="split-line"><span class="split-inner"><em>in mind?</em></span></span>
         </h2>
-        <a href="mailto:izabel@email.com" class="contact-cta">
+
+        <a href="mailto:fontez.izabel@gmail.com" class="contact-cta">
           <div class="contact-cta-bg"></div>
-          <span>Start a conversation</span>
+          <span>Let's get in touch</span>
           <span class="contact-arrow">↗</span>
         </a>
       </div>
@@ -378,11 +397,15 @@
        FOOTER
        ============================================================ -->
   <footer>
-    <span class="footer-copy mono">&copy; 2025 Izabel Fontes</span>
+    <span class="footer-copy mono">&copy; 2026 — created with ♥ by Izabel Fontes &middot; all rights reserved</span>
     <div class="footer-links">
+      <a href="#works" class="mono">Works</a>
+      <a href="#about" class="mono">About</a>
+      <a href="#contact" class="mono">Contact</a>
+    </div>
+    <div class="footer-social">
       <a href="#" class="mono">LinkedIn</a>
-      <a href="#" class="mono">Calendly</a>
-      <a href="mailto:izabel@email.com" class="mono">Email</a>
+      <a href="#" class="mono">Behance</a>
     </div>
   </footer>
 
