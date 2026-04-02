@@ -387,4 +387,22 @@ if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     loader.style.display = 'none';
     heroReveal();
   }
+
+  /* ============================================================
+   REVEAL ON SCROLL
+   ============================================================ */
+
+const reveals = document.querySelectorAll('.reveal');
+
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('is-visible');
+    }
+  });
+}, {
+  threshold: 0.12
+});
+
+reveals.forEach((el) => revealObserver.observe(el));
 }

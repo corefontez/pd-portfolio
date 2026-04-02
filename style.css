@@ -762,6 +762,32 @@ section {
               background 0.5s ease;
 }
 
+.work-ribbon {
+  position: absolute;
+  top: 22px;
+  right: -52px;
+  z-index: 8;
+
+  width: 190px;
+  padding: 9px 0;
+
+  text-align: center;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  line-height: 1;
+
+  color: #0d0d0d;
+  background: var(--lime);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+
+  transform: rotate(45deg);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.18);
+
+  pointer-events: none;
+}
+
 .work-item.visible {
   opacity: 1;
   transform: translateY(0);
@@ -826,9 +852,7 @@ section {
   z-index: 2;
 }
 
-.work-item:hover .work-item-visual {
-  clip-path: inset(0 0% 0 0);
-}
+
 
 /* Gradient fade — blends image left edge into background */
 .work-item-fade {
@@ -920,12 +944,10 @@ section {
 }
 
 .work-tool {
-  font-size: 0.68rem;
+  font-size: 0.7rem;
   letter-spacing: 0.08em;
   color: var(--text-sec);
-  border: 1px solid var(--border);
-  border-radius: 2px;
-  padding: 2px 6px;
+  padding: 2px 8px;
 }
 
 .work-item-meta {
@@ -979,7 +1001,7 @@ section {
 .bento-grid {
   display: grid;
   grid-template-columns: 1.8fr 1.4fr 1fr;
-  grid-template-rows: auto auto 170px;
+  grid-template-rows: auto 200px 170px;
   gap: 12px;
   position: relative;
   z-index: 1;
@@ -1048,7 +1070,7 @@ section {
   grid-row: 2 / 3;
   padding: 0;
   overflow: hidden;
-  min-height: 190px;
+  min-height: 160px;
 }
 
 .bento-photo-strip {
@@ -1105,16 +1127,6 @@ section {
   justify-content: space-between;
 }
 
-.bento-exp-avail {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 0.7rem;
-  color: var(--lime);
-  font-family: var(--font-mono);
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-}
 
 .bento-exp-list {
   flex: 1;
@@ -1159,29 +1171,24 @@ section {
   line-height: 1.3;
 }
 
-/* TOOLS */
+/* TOOLS 
 .bento-tools-row {
-  grid-column: 1 / 2;
+  grid-column: 1 / 4;
   grid-row: 3 / 4;
   display: flex;
   flex-direction: column;
 }
 
-.bento-ai-tools-row {
-  grid-column: 2 / 4;
-  grid-row: 3 / 4;
-  display: flex;
-  flex-direction: column;
-}
 
 /* Both bottom cards resolve to 2fr each — equal visual weight */
 
-.bento-logos {
+/*.bento-logos {
   display: flex;
-  gap: 10px;
+  gap: 16px;
   flex: 1;
   align-items: center;
   flex-wrap: wrap;
+  justify-content: space-between;
   margin-top: auto;
 }
 
@@ -1206,8 +1213,8 @@ section {
 }
 
 .bento-logo img {
-  width: 24px;
-  height: 24px;
+  width: 38px;
+  height: 38px;
   object-fit: contain;
   display: block;
   opacity: 0.9;
@@ -1215,7 +1222,7 @@ section {
 
 .bento-logo img[src=""] {
   opacity: 0;
-}
+} */
 
 /* TABLET */
 @media (max-width: 1024px) {
@@ -1569,5 +1576,98 @@ footer {
   .bento-quote   { grid-column: 1; }
   .bento-focus   { grid-column: 1; }
 
+  /* ============================================================
+   PREMIUM MOTION
+   ============================================================ */
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Better font rendering */
+body {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Smooth transitions */
+a,
+button,
+.bento-card,
+.project-card,
+.navbar a,
+.navbar button,
+.cta-button,
+.nav-cta {
+  transition: all 0.3s ease;
+}
+
+/* Card hover */
+.bento-card:hover,
+.project-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Button hover */
+button:hover,
+.nav-cta:hover,
+.cta-button:hover {
+  transform: translateY(-2px);
+}
+
+/* Navbar underline hover */
+.navbar a {
+  position: relative;
+  transition: color 0.25s ease;
+}
+
+.navbar a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 1px;
+  background: currentColor;
+  transition: width 0.25s ease;
+}
+
+.navbar a:hover::after {
+  width: 100%;
+}
+
+/* ============================================================
+   REVEAL ON SCROLL
+   ============================================================ */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  will-change: opacity, transform;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Optional stagger delays */
+.reveal-delay-1 {
+  transition-delay: 0.1s;
+}
+
+.reveal-delay-2 {
+  transition-delay: 0.2s;
+}
+
+.reveal-delay-3 {
+  transition-delay: 0.3s;
+}
+
+.reveal-delay-4 {
+  transition-delay: 0.4s;
+}
   
 }
