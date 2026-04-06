@@ -1012,7 +1012,9 @@ section {
 
 /* Project placeholder backgrounds — Design System colors */
 .northe-bg {
-  background: linear-gradient(135deg, #1a0b38 0%, #2e166a 40%, #8B5CF6 100%);
+  background: linear-gradient(135deg, rgba(26, 11, 56, 0.7) 0%, rgba(46, 22, 106, 0.3) 100%), url('assets/images/nutria_hero_image.png');
+  background-size: cover;
+  background-position: center;
 }
 
 .universal-bg {
