@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nutria — Case Study</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,500;1,8..60,300;1,8..60,400&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500;1,600&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,400&family=Mansalva&display=swap"
+    rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+
+  <!-- ============================================================
+       NAV — links LEFT · name CENTER · CTA RIGHT
+       ============================================================ -->
+  <nav id="nav">
+
+    <!-- Left: navigation links -->
+    <ul class="nav-links">
+      <li><a href="../../index.html">Home</a></li>
+      <li><a href="../../index.html#works">Works</a></li>
+      <li><a href="../../index.html#about">About</a></li>
+      <li><a href="../../index.html#contact">Contact</a></li>
+    </ul>
+
+    <!-- Center: photo + name → email on scroll -->
+    <div class="nav-center">
+      <div class="nav-brand">
+        <div class="nav-photo">
+          <img src="../../assets/images/izzy.png" alt="Izabel Fontes">
+        </div>
+        <div class="nav-text-swap">
+          <span class="nav-name">Izabel Fontes</span>
+          <a href="mailto:fontez.izabel@gmail.com?subject=Vamos%20conversar"
+            class="nav-email mono">fontez.izabel@gmail.com</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: CTA -->
+    <div class="nav-right">
+      <a href="https://calendly.com/izabel-fontes/15min" class="btn-nav" target="_blank" rel="noopener">Book a Call</a>
+    </div>
+
+  </nav>
+
+  <main class="case-study-page">
+
+    <!-- HERO -->
+    <section class="case-hero" id="overview">
+
+      <div class="case-orb case-orb-1" aria-hidden="true"></div>
+      <div class="case-orb case-orb-2" aria-hidden="true"></div>
+      <div class="case-hero-accent" aria-hidden="true"></div>
+
+      <div class="case-hero-layout">
+
+        <div class="case-hero-copy reveal">
+          <p class="case-eyebrow mono">UX/UI Case Study</p>
+
+          <h1 class="case-title">
+            What if churn<br />
+            <em class="case-title-em">didn't</em> have to<br />
+            be a surprise?
+          </h1>
+
+          <p class="case-description">
+            A retention-focused dashboard concept built to turn vague behavioral
+            signals into earlier, clearer intervention.
+          </p>
+
+          <div class="case-meta-bento">
+
+            <div class="case-meta-card reveal reveal-delay-1">
+              <span class="case-meta-label mono">Role</span>
+              <p>UX/UI Designer</p>
+            </div>
+
+            <div class="case-meta-card reveal reveal-delay-2">
+              <span class="case-meta-label mono">Timeline</span>
+              <p>3 weeks</p>
+            </div>
+
+            <div class="case-meta-card case-meta-card--wide reveal reveal-delay-3">
+              <span class="case-meta-label mono">Goal</span>
+              <p>
+                Help nutritionists identify churn risk earlier and take action before drop-off happens
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="case-hero-visual reveal reveal-delay-2">
+          <img src="../../assets/images/nutria_hero_image.png" alt="Nutria dashboard preview" loading="eager"
+            decoding="async" />
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- PROBLEM -->
+    <section class="case-section case-challenge" id="problem">
+      <div class="case-section-inner">
+
+        <div class="case-section-heading reveal">
+          <p class="case-section-eyebrow mono">Problem_</p>
+          <h2 class="case-section-title">
+            The retention problem wasn’t visible.
+          </h2>
+          <p class="case-section-subtitle">
+            Independent nutritionists had tools for care delivery — but not for identifying who was quietly slipping
+            away.
+          </p>
+        </div>
+
+        <div class="case-problem-grid reveal">
+          <div class="case-problem-card">
+            <span class="problem-card-icon">01</span>
+            <h3 class="problem-card-title">Fragmented signals</h3>
+            <p class="problem-card-desc">Missed check-ins and low engagement clues are buried deep within complex
+              clinical records.</p>
+          </div>
+          <div class="case-problem-card">
+            <span class="problem-card-icon">02</span>
+            <h3 class="problem-card-title">Reactive follow-up</h3>
+            <p class="problem-card-desc">Without structured risk alerts, practitioners reach out only after the patient
+              has already dropped off.</p>
+          </div>
+          <div class="case-problem-card">
+            <span class="problem-card-icon">03</span>
+            <h3 class="problem-card-title">No retention visibility</h3>
+            <p class="problem-card-desc">Tooling optimizes for building meal plans, effectively ignoring the lifecycle
+              phase of keeping patients engaged.</p>
+          </div>
+          <div class="case-problem-card">
+            <span class="problem-card-icon">04</span>
+            <h3 class="problem-card-title">Revenue instability</h3>
+            <p class="problem-card-desc">The 20-30% silent drop-off directly damages scaling efforts and the financial
+              health of independent clinics.</p>
+          </div>
+        </div>
+
+        <div class="case-problem-insight reveal reveal-delay-1">
+          <h3 class="insight-text">When churn is invisible,<br> intervention happens too late.</h3>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- RESEARCH -->
+    <!-- RESEARCH & THINKING -->
+    <section class="case-section case-research" id="research">
+      <div class="case-section-inner">
+
+        <div class="case-section-heading reveal">
+          <p class="case-section-eyebrow mono">Research & Thinking_</p>
+          <h2 class="case-section-title">Turning invisible signals into clear decisions</h2>
+          <p class="case-section-subtitle">
+            I started by understanding how independent nutritionists already manage engagement and retention. I had a real conversation with a practicing nutritionist and analyzed 10+ health platforms to map behavioral signals and test information hierarchies.
+          </p>
+        </div>
+
+        <!-- Part 1: Benchmarking -->
+        <div class="research-sub-section reveal mt-5">
+          <h3 class="research-sub-title mono">01. Benchmarking Analysis</h3>
+          <p class="research-sub-desc mt-2">I focused on how other platforms surface signals, prioritize patients, and support action rather than just copying layouts.</p>
+          
+          <div class="benchmarking-insights mt-4">
+            <div class="benchmarking-card">
+              <p class="benchmarking-card-text">Most tools support tracking patient data, but rarely surface clear risk signals for retention.</p>
+            </div>
+            <div class="benchmarking-card">
+              <p class="benchmarking-card-text">Business-level visibility (revenue, retention risk, recurrence) is often missing from nutrition platforms.</p>
+            </div>
+            <div class="benchmarking-card">
+              <p class="benchmarking-card-text">Alerts are usually notifications, not prioritization layers — users still have to interpret what’s urgent.</p>
+            </div>
+            <div class="benchmarking-card">
+              <p class="benchmarking-card-text">Retention is often managed through intuition and manual follow‑ups, not structured visibility.</p>
+            </div>
+          </div>
+
+          <div class="benchmarking-snapshot mt-5">
+            <div class="benchmarking-visual-placeholder">
+              <span>Image: Benchmarking Analysis Matrix</span>
+            </div>
+            <p class="diagram-caption">A visual placeholder for my benchmarking analysis (matrix of 6–8 platforms).</p>
+          </div>
+        </div>
+
+        <!-- Part 2: Thinking & Gaps -->
+        <div class="research-sub-section reveal mt-5 pt-5" style="border-top: 1px solid var(--border);">
+          <h3 class="research-sub-title mono">02. Mapping Visibility Gaps</h3>
+          <p class="research-sub-desc mt-2">Combined nutritionist interviews with behavioral signal analysis to define what actually enables a retention decision.</p>
+
+          <div class="case-research-snapshot mt-4">
+            <img src="assets/research_figjam.png" alt="UX Research Board" class="research-figjam-image">
+            <p class="diagram-caption">A mapping of visibility gaps and behavioral signal analysis via Miro.</p>
+          </div>
+
+          <div class="case-research-grid mt-4">
+            <div class="case-research-card">
+              <h3 class="research-card-title">Metrics without meaning</h3>
+              <p class="research-card-desc">Tools already show numbers — but they don’t explain why a patient is at risk. The dashboard needed to add context to the data.</p>
+            </div>
+            <div class="case-research-card">
+              <h3 class="research-card-title">Fast scanning, high stakes</h3>
+              <p class="research-card-desc">Nutritionists scan dashboards in under 30 seconds. The IA must answer: What’s urgent? Why? What’s next?</p>
+            </div>
+            <div class="case-research-card">
+              <h3 class="research-card-title">Retention is behavior first</h3>
+              <p class="research-card-desc">Retention is often managed through intuition and manual follow‑ups, not structured visibility. I focused on making disengagement patterns visible first.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="case-research-wrapup reveal mt-5">
+          <p class="research-wrapup-text">
+            Instead of treating this as a generic analytics screen, I treated it as a **decision space**: what should a nutritionist see first, what should they ignore, and what should they act on.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+        <!-- STRATEGY / UX DIRECTION -->
+        <section class="case-section case-strategy" id="strategy">
+          <div class="case-section-inner">
+
+            <div class="case-section-heading reveal">
+              <h2 class="case-section-title">
+                UX Direction & Principles
+              </h2>
+              <p class="case-section-subtitle mt-2">
+                A dashboard isn’t a report — it’s a decision engine. Instead of showing more data, I focused on making it easier to understand what’s happening, what needs action, and what can be ignored.
+              </p>
+            </div>
+
+            <!-- DIAGRAM -->
+            <div class="strategy-diagram-wrap reveal mt-4">
+              <div class="strategy-diagram">
+                <div class="diagram-inputs">
+                  <div class="diagram-box">Awareness<span class="diagram-sub">What’s happening now?</span></div>
+                  <div class="diagram-box">Prioritization<span class="diagram-sub">What needs action first?</span></div>
+                  <div class="diagram-box">Insight/Action<span class="diagram-sub">Why, and how to respond?</span></div>
+                </div>
+                <div class="diagram-arrow">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M5 12h14m0 0l-6-6m6 6l-6 6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <div class="diagram-core">
+                  <div class="diagram-core-box">Decision<br>Engine</div>
+                </div>
+              </div>
+              <p class="diagram-caption">How the dashboard is structured around three decision layers.</p>
+            </div>
+
+            <!-- CARDS -->
+            <div class="case-research-grid reveal mt-4">
+              <div class="case-research-card">
+                <h3 class="research-card-title">Awareness – What’s happening now?</h3>
+                <p class="research-card-desc">Prioritized a high‑level health snapshot instead of deep analytics. The overview shows what’s changing across the patient base at a glance.</p>
+              </div>
+              <div class="case-research-card">
+                <h3 class="research-card-title">Prioritization – What needs action first?</h3>
+                <p class="research-card-desc">Organized patients by risk level and key signals so nutritionists can quickly decide who to attend to first.</p>
+              </div>
+              <div class="case-research-card">
+                <h3 class="research-card-title">Insight/Action – Why, and how to respond?</h3>
+                <p class="research-card-desc">Combined behavioral signals with suggested actions, turning vague risk into concrete next steps.</p>
+              </div>
+            </div>
+
+            <!-- WRAPUP -->
+            <div class="case-research-wrapup reveal mt-4">
+              <p class="research-wrapup-text">
+                Instead of designing for more data, I designed for faster decisions — narrowing the scope to retention, simplifying signals to a core set, and using AI‑assisted actions to reduce cognitive load.
+              </p>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- RESEARCH & THINKING (PROCESS) -->
+        <section class="case-section case-process" id="process">
+          <div class="case-section-inner">
+
+            <div class="case-section-heading reveal">
+              <h3 class="case-section-title" style="font-size: 1.75rem;">
+                How I approached the problem
+              </h3>
+              <p class="case-section-subtitle mt-2">
+                To shape this decision‑oriented dashboard, I first mapped how nutritionists experience visibility gaps, how the market solves the problem today, and which signals actually lead to action.
+              </p>
+            </div>
+
+            <div class="process-blocks reveal mt-4">
+              <div class="process-block">
+                <span class="process-block-num mono">01</span>
+                <div class="process-block-content">
+                  <h4 class="process-block-title">Mapping visibility gaps</h4>
+                  <p class="process-block-desc">I started by understanding where nutritionists were losing visibility — not just in patient management, but in retention, engagement, and revenue risk. The goal was to see where intuition was filling the gap.</p>
+                </div>
+              </div>
+              <div class="process-block">
+                <span class="process-block-num mono">02</span>
+                <div class="process-block-content">
+                  <h4 class="process-block-title">Analyzing the market</h4>
+                  <p class="process-block-desc">I reviewed existing nutrition platforms to identify what is already supported well — like meal plans and scheduling — and what remains invisible, especially around retention and business‑level decisions.</p>
+                </div>
+              </div>
+              <div class="process-block">
+                <span class="process-block-num mono">03</span>
+                <div class="process-block-content">
+                  <h4 class="process-block-title">Defining signals that drive action</h4>
+                  <p class="process-block-desc">Instead of treating the dashboard as a reporting tool, I focused on which behavioral patterns and risk indicators actually matter for decisions — like inactivity, missed check‑ins, and adherence drops.</p>
+                </div>
+              </div>
+              <div class="process-block">
+                <span class="process-block-num mono">04</span>
+                <div class="process-block-content">
+                  <h4 class="process-block-title">From insight to product flow</h4>
+                  <p class="process-block-desc">With these insights, I structured the experience around clarity and prioritization, then moved into interface design, dashboard logic, and AI‑assisted alert patterns to create a testable churn prevention flow.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="process-divider reveal mt-4">
+              <hr class="subtle-hr">
+              <p class="process-note mono text-muted mt-2" style="font-size: 0.85rem;">Below, this thinking is translated into the information architecture and screens that follow.</p>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- INFORMATION ARCHITECTURE -->
+        <section class="case-section case-ia" id="architecture">
+          <div class="case-section-inner">
+            
+            <div class="case-section-heading reveal">
+              <h2 class="case-section-title">Information Architecture: The Core System</h2>
+              <p class="case-section-subtitle mt-2">IA is the project’s heart — turning chaos into clarity. The dashboard is designed as a layered flow that moves users from awareness to action with minimal friction.</p>
+            </div>
+
+            <div class="ia-flow-diagram-wrap reveal mt-4">
+              <div class="ia-flow-diagram">
+                <div class="ia-flow-node">Home Dashboard</div>
+                <div class="ia-flow-arrow"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="24" height="24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 12h14m0 0l-6-6m6 6l-6 6"></path></svg></div>
+                <div class="ia-flow-node">Smart Alerts</div>
+                <div class="ia-flow-arrow"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="24" height="24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 12h14m0 0l-6-6m6 6l-6 6"></path></svg></div>
+                <div class="ia-flow-node">Patient Profile</div>
+                <div class="ia-flow-arrow"><svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="24" height="24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 12h14m0 0l-6-6m6 6l-6 6"></path></svg></div>
+                <div class="ia-flow-node">Action</div>
+              </div>
+              <p class="ia-flow-caption mono text-muted mt-2 text-center" style="font-size: 0.85rem; text-align: center;">Layered flow: Awareness → Prioritization → Insight/Action</p>
+            </div>
+
+            <div class="case-research-grid reveal mt-4">
+              <div class="case-research-card">
+                <h3 class="research-card-title">Layer 1 – Awareness</h3>
+                <p class="research-card-desc">The dashboard shows a high‑signal health snapshot — total patients, % at risk, and adherence trends — so users can get a ‘pulse check’ in under 5 seconds. Cards stack by urgency.</p>
+              </div>
+              <div class="case-research-card">
+                <h3 class="research-card-title">Layer 2 – Prioritization</h3>
+                <p class="research-card-desc">A triage list of at‑risk patients, with risk score, key signal (e.g., ‘7d inactivity’), and suggested action. This reduces the number of patients to review from 100+ down to a handful.</p>
+              </div>
+              <div class="case-research-card">
+                <h3 class="research-card-title">Layer 3 – Insight/Action</h3>
+                <p class="research-card-desc">The patient profile drills into behavior over time, with a timeline, AI‑assisted explanations, and one‑tap actions like sending a message, scheduling a call, or adjusting a plan.</p>
+              </div>
+            </div>
+
+            <div class="case-research-wrapup reveal mt-4">
+              <p class="research-wrapup-text">
+                This layered IA keeps 80% of decisions in the first two layers, only escalating to deeper context when truly needed.
+              </p>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- DESIGN SYSTEM -->
+        <section class="case-section case-design-system" id="design-system">
+          <div class="case-section-inner">
+            
+            <div class="case-section-heading reveal">
+              <h2 class="case-section-title">Design System: Translating Figma to Code</h2>
+            </div>
+
+            <div class="ds-split-layout reveal mt-4">
+              <div class="ds-text-side">
+                <p class="case-section-subtitle" style="margin-top: 0; max-width: 100%;">
+                  To ensure a seamless handoff and maintain a living design system, I asked Claude Code to translate the design from Figma directly into this document. This process included building custom design tokens, defining a cohesive color palette, and structuring modular components that power the entire product experience.
+                </p>
+                <div class="ds-token-tag mono mt-2">Design Tokens Generated via AI</div>
+              </div>
+              <div class="ds-visual-side">
+                <div class="ds-image-grid">
+                  <div class="ds-image-placeholder small">
+                    <span class="placeholder-tag">Image: Style Guide</span>
+                  </div>
+                  <div class="ds-image-placeholder small">
+                    <span class="placeholder-tag">Image: Components</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- SOLUTION / INTERFACE -->
+        <section class="case-section case-solution" id="solution">
+          <div class="case-section-inner">
+
+            <div class="case-section-heading reveal">
+              <h2 class="case-section-title">How this translated into the interface</h2>
+              <p class="case-section-subtitle mt-2">
+                The solution was designed as a guided decision flow — helping nutritionists move from <strong>awareness to action</strong> before patient churn becomes visible too late.
+                <br><br>
+                Rather than building a dashboard around passive reporting, I focused on structuring the experience around one key task:
+              </p>
+              <blockquote class="">
+                "Identify a patient at risk and take the right retention action early enough to make a difference."
+              </blockquote>
+              <p class="case-section-subtitle">
+                This meant designing not just isolated screens, but a workflow that could support:
+              </p>
+              <ul class="intro-bullets mt-2">
+                <li>Early signal detection</li>
+                <li>Prioritization</li>
+                <li>Patient-level understanding</li>
+                <li>Fast, low-friction intervention</li>
+              </ul>
+            </div>
+
+            <!-- 1. CORE USER FLOW -->
+            <div class="case-section-heading reveal mt-5">
+              <h3 class="case-section-title" style="font-size: 1.5rem;">1. Core User Flow</h3>
+              <div class="product-flow-wrap mt-4">
+                <div class="product-flow">
+                  <div class="flow-step">
+                    <span class="flow-label">Home Dashboard</span>
+                  </div>
+                  <div class="flow-arrow">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m0 0l-6-6m6 6l-6 6"></path></svg>
+                  </div>
+                  <div class="flow-step">
+                     <span class="flow-label">Smart Alerts</span>
+                  </div>
+                  <div class="flow-arrow">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m0 0l-6-6m6 6l-6 6"></path></svg>
+                  </div>
+                  <div class="flow-step">
+                    <span class="flow-label">Patient Profile</span>
+                  </div>
+                  <div class="flow-arrow">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m0 0l-6-6m6 6l-6 6"></path></svg>
+                  </div>
+                  <div class="flow-step highlight">
+                    <span class="flow-label">Follow-up Decision</span>
+                  </div>
+                </div>
+                <div class="flow-paths mt-4">
+                  <div class="flow-path-item mb-4">
+                    <h4 class="mono text-orange" style="font-size: 0.8rem; letter-spacing: 0.05em;">Primary Path</h4>
+                    <p class="text-muted mt-1">Reflects the intended decision-making sequence: <strong>Awareness → Prioritization → Intervention</strong>. The goal was to help nutritionists move from signal → context → action without relying on guesswork.</p>
+                  </div>
+                  <div class="flow-path-item">
+                    <h4 class="mono text-orange" style="font-size: 0.8rem; letter-spacing: 0.05em;">Secondary Path</h4>
+                    <p class="text-muted mt-1"><strong>Home Dashboard → Flagged patient card → Patient Profile</strong>. Allows users to jump directly into a flagged profile when they already know where they want to investigate.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2. SCREEN WALKTHROUGH -->
+            <div class="interface-walkthrough mt-5">
+              
+              <hr class="subtle-hr reveal mb-5">
+
+              <!-- Dashboard Overview -->
+              <div class="walkthrough-block reveal">
+                <div class="walkthrough-content">
+                  <span class="walkthrough-job">Job: Surface overall retention health and make priority visible.</span>
+                  <p class="walkthrough-mindset">“What needs my attention today?”</p>
+                  <div class="walkthrough-explanation">
+                    <p>The dashboard was designed to give a quick, high-signal overview of what is happening across the nutritionist’s patient base — without overwhelming them with unnecessary analytics.</p>
+                    <p>Rather than centering the experience around general business reporting, I prioritized the information that could support <strong>daily retention awareness and action readiness</strong>.</p>
+                    <ul>
+                      <li>total patients</li>
+                      <li>number of patients at risk</li>
+                      <li>overall program adherence</li>
+                      <li>smart alerts</li>
+                      <li>today’s appointments</li>
+                      <li>patient engagement patterns</li>
+                    </ul>
+                    <p>The layout was intentionally structured to answer: What is the current health of my patient base? Who might need attention right now? Where should I look first?</p>
+                    <p>It was designed as a <strong>decision-entry point</strong> — helping the user spot possible retention issues early and move into investigation with less friction.</p>
+                  </div>
+                </div>
+                <div class="walkthrough-visual">
+                  <div class="walkthrough-image-placeholder">
+                    <span class="placeholder-tag">Image: Dashboard Overview</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Smart Alerts -->
+              <div class="walkthrough-block reveal">
+                <div class="walkthrough-content">
+                  <span class="walkthrough-job">Job: Help the user triage and prioritize who needs action first.</span>
+                  <p class="walkthrough-mindset">“Which patients are showing early churn signals, and what should I review next?”</p>
+                  <div class="walkthrough-explanation">
+                    <p>The Smart Alerts screen was designed to turn passive signals into <strong>actionable risk visibility</strong>. Instead of traditional notifications, it acts as a prioritization layer.</p>
+                    <p>This screen groups at-risk patients based on behavioral patterns such as inactivity, adherence drop, and plan renewal risk.</p>
+                    <ul>
+                      <li>risk level & risk score</li>
+                      <li>key signal</li>
+                      <li>last seen activity</li>
+                      <li>suggested action</li>
+                    </ul>
+                    <p>This structure helps frame: <strong>who needs attention now — and why</strong>. This is where the workflow shifts from awareness into focused decision-making.</p>
+                  </div>
+                </div>
+                <div class="walkthrough-visual">
+                  <div class="walkthrough-image-placeholder">
+                    <span class="placeholder-tag">Image: Smart Alerts</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Patient Profile -->
+              <div class="walkthrough-block reveal">
+                <div class="walkthrough-content">
+                  <span class="walkthrough-job">Job: Give enough context to understand the risk and choose a next step.</span>
+                  <p class="walkthrough-mindset">“What’s going on with this patient, and what should I do?”</p>
+                  <div class="walkthrough-explanation">
+                    <p>The patient profile supports the transition from <strong>risk visibility to action clarity</strong>. Instead of only showing a churn score, it explains <strong>what's driving the risk</strong>.</p>
+                    <p>The experience highlights specific behaviors contributing to risk, making it explainable rather than abstract:</p>
+                    <ul>
+                      <li>check-in inactivity</li>
+                      <li>reduced message activity</li>
+                      <li>adherence drop</li>
+                      <li>app inactivity</li>
+                      <li>progress plateau</li>
+                    </ul>
+                    <p>This screen is designed to answer: What changed? How serious is it? What kind of intervention makes sense now?</p>
+                  </div>
+                </div>
+                <div class="walkthrough-visual">
+                  <div class="walkthrough-image-placeholder">
+                    <span class="placeholder-tag">Image: Patient Profile</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Action / Intervention -->
+              <div class="walkthrough-block reveal">
+                <div class="walkthrough-content">
+                  <span class="walkthrough-job">Job: Enable the user to respond before churn happens.</span>
+                  <p class="walkthrough-mindset">“How should I follow up?”</p>
+                  <div class="walkthrough-explanation">
+                    <p>Once a patient is identified as at risk, the experience supports immediate intervention, reducing the gap between <strong>noticing a problem</strong> and <strong>actually responding</strong>.</p>
+                    <p>The system suggests context-aware interventions based on the behavior identified:</p>
+                    <ul>
+                      <li>Low engagement → send a message</li>
+                      <li>Missed check-ins → schedule follow-up</li>
+                      <li>Adherence drop → adjust plan</li>
+                    </ul>
+                    <p>The modal supports fast, personal, and lightweight outreach while keeping the final decision in the hands of the nutritionist.</p>
+                  </div>
+                </div>
+                <div class="walkthrough-visual">
+                  <div class="walkthrough-image-placeholder">
+                    <span class="placeholder-tag">Image: Action / Intervention</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Confirmation / Follow-up State -->
+              <div class="walkthrough-block reveal">
+                <div class="walkthrough-content">
+                  <span class="walkthrough-job">Job: Confirm that action was taken and keep the case visible for follow-up.</span>
+                  <p class="walkthrough-mindset">“I acted — what happens now?”</p>
+                  <div class="walkthrough-explanation">
+                    <p>The final part of the flow closes the loop. Once an action is taken, the system confirms the intervention while keeping the case visible for continued monitoring.</p>
+                    <p>This confirmation layer reinforces that the action was sent and that the patient is now in an active follow-up state.</p>
+                    <p>Retention isn't solved by one action alone; this step ensures the nutritionist can act quickly, log the intervention, and track re-engagement signals over time.</p>
+                  </div>
+                </div>
+                <div class="walkthrough-visual">
+                  <div class="walkthrough-image-placeholder">
+                    <span class="placeholder-tag">Image: Confirmation / Follow-up State</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        <!-- MEASURING SUCCESS & IMPACT -->
+        <section class="case-section case-impact" id="impact">
+          <div class="case-section-inner">
+
+            <div class="case-section-heading reveal">
+              <h2 class="case-section-title">How success would be measured</h2>
+              <p class="case-section-subtitle mt-2">
+                The design was intentionally built to improve <strong>how quickly and clearly nutritionists can detect risk and act on it</strong>. If this were implemented, success would be measured across three layers:
+              </p>
+            </div>
+
+            <div class="case-research-grid reveal mt-5">
+              <!-- Visibility -->
+              <div class="case-research-card impact-card">
+                <div class="impact-card-header">
+                  <span class="impact-label mono">Layer 1</span>
+                  <h3 class="research-card-title">Visibility</h3>
+                </div>
+                <p class="impact-question">Are users noticing risk earlier?</p>
+                <ul class="impact-metrics">
+                  <li>% of at-risk patients viewed before churn</li>
+                  <li>Time to identify a flagged patient</li>
+                  <li>Dashboard-to-alert click-through rate</li>
+                  <li>Number of flagged patients reviewed per week</li>
+                </ul>
+                <div class="impact-why">
+                  <span class="why-label mono">Why it matters</span>
+                  <p>Awareness is the first goal. If users aren’t seeing risk signals early enough, the rest of the flow doesn’t matter.</p>
+                </div>
+              </div>
+
+              <!-- Actionability -->
+              <div class="case-research-card impact-card">
+                <div class="impact-card-header">
+                  <span class="impact-label mono">Layer 2</span>
+                  <h3 class="research-card-title">Actionability</h3>
+                </div>
+                <p class="impact-question">Are users actually taking action once risk is surfaced?</p>
+                <ul class="impact-metrics">
+                  <li>Alert-to-profile click-through rate</li>
+                  <li>% of flagged patients receiving follow-up action</li>
+                  <li>Time from alert to intervention</li>
+                  <li>Use rate of recommended actions</li>
+                </ul>
+                <div class="impact-why">
+                  <span class="why-label mono">Why it matters</span>
+                  <p>The core value is helping users respond before churn happens. If users see alerts but don’t act, the workflow is failing.</p>
+                </div>
+              </div>
+
+              <!-- Retention Impact -->
+              <div class="case-research-card impact-card">
+                <div class="impact-card-header">
+                  <span class="impact-label mono">Layer 3</span>
+                  <h3 class="research-card-title">Retention Impact</h3>
+                </div>
+                <p class="impact-question">Does earlier visibility lead to better retention?</p>
+                <ul class="impact-metrics">
+                  <li>Retention rate of flagged patients after intervention</li>
+                  <li>Recovery rate of at-risk patients</li>
+                  <li>Plan renewal rate</li>
+                  <li>Revenue recovered from at-risk patients</li>
+                </ul>
+                <div class="impact-why">
+                  <span class="why-label mono">Why it matters</span>
+                  <p>This is business impact. The long-term success depends on whether earlier intervention actually reduces avoidable churn.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- EXPECTATIONS -->
+            <div class="case-section-heading reveal mt-5">
+              <h3 class="case-section-title" style="font-size: 1.5rem;">What I would expect to improve</h3>
+              <div class="walkthrough-explanation mt-4">
+                <p>If the workflow is working well, I’d expect to see improvements in:</p>
+                <ul>
+                  <li>Earlier identification of disengagement patterns</li>
+                  <li>Faster follow-up response time</li>
+                  <li>More consistent intervention behavior</li>
+                  <li>Better visibility into retention risk</li>
+                  <li>Stronger recovery of patients who might otherwise drop off</li>
+                </ul>
+              </div>
+              <blockquote class="mt-4" style="border-left: 2px solid var(--orange); padding-left: 20px; font-style: italic; font-size: 1.25rem; color: var(--text);">
+                "More than anything, I’d expect the product to shift the nutritionist’s workflow from reacting late to acting earlier with more confidence."
+              </blockquote>
+            </div>
+
+          </div>
+        <!-- DECISIONS (Placeholder for future content or merging) -->
+        <section class="case-section case-decisions" id="decisions" style="padding: 0; min-height: 0;"></section>
+
+        <!-- REFLECTION -->
+        <section class="case-section case-reflection" id="reflection">
+          <div class="case-section-inner">
+            <div class="case-section-heading reveal">
+              <h2 class="case-section-title">Reflection</h2>
+              <p class="case-section-subtitle mt-2">What improved, what I’d test next, and what I learned.</p>
+            </div>
+
+            <div class="reflection-content reveal mt-5">
+              <div class="reflection-text">
+                <p>
+                  This project started as a product gap — independent nutritionists lacked visibility into retention risk — but it quickly became a design exercise in **decision‑making**, not just interface design.
+                </p>
+                <p>
+                  What made it interesting wasn’t building another dashboard, but turning vague behavioral patterns into something nutritionists could actually understand and act on. The challenge was designing around a single core task: <strong>“How might a nutritionist identify early disengagement and intervene before a patient disappears?”</strong>
+                </p>
+                <p>
+                  The biggest shift was moving away from “show more data” and toward three questions: <em>What should be visible first? What actually helps the user decide? What deserves action — versus just attention?</em> That changed how I approached the product: instead of starting from screens, I started from the retention task, then shaped the IA, flow, and UI around it.
+                </p>
+                <p>
+                  If I were to continue this project, I’d test whether the alert hierarchy actually reduces decision time, how consistently nutritionists act on recommendations, and if the AI‑assisted explanations add clarity or create overconfidence. More than anything, this project strengthened my ability to design systems that turn invisible signals into clear decisions — a <strong>skill that will be even more valuable in SaaS and healthcare products abroad</strong>.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Progress Nav -->
+        <nav class="case-progress-nav" aria-label="Case study sections">
+          <a href="#overview" class="case-progress-link active" aria-current="true">
+            <span class="case-progress-dot"></span>
+            <span class="case-progress-label mono">Overview</span>
+          </a>
+
+          <a href="#problem" class="case-progress-link">
+            <span class="case-progress-dot"></span>
+            <span class="case-progress-label mono">Problem</span>
+          </a>
+
+          <a href="#research" class="case-progress-link">
+            <span class="case-progress-dot"></span>
+            <span class="case-progress-label mono">Research</span>
+          </a>
+
+          <a href="#strategy" class="case-progress-link">
+            <span class="case-progress-dot"></span>
+            <span class="case-progress-label mono">Strategy</span>
+          </a>
+
+          <a href="#process" class="case-progress-link">
+            <span class="case-progress-dot"></span>
+            <span class="case-progress-label mono">Process</span>
+          </a>
+
+          <a href="#architecture" class="case-progress-link">
+            <span class="case-progress-dot"></span>
+            <span class="case-progress-label mono">Architecture</span>
+          </a>
+
+          <a href="#design-system" class="case-progress-link">
+            <span class="case-progress-dot"></span>
+            <span class="case-progress-label mono">Design System</span>
+          </a>
+
+          <a href="#solution" class="case-progress-link">
+            <span class="case-progress-dot"></span>
+            <span class="case-progress-label mono">Solution</span>
+          </a>
+
+          <a href="#impact" class="case-progress-link">
+            <span class="case-progress-dot"></span>
+            <span class="case-progress-label mono">Impact</span>
+          </a>
+
+          <a href="#decisions" class="case-progress-link">
+            <span class="case-progress-dot"></span>
+            <span class="case-progress-label mono">Decisions</span>
+          </a>
+
+          <a href="#reflection" class="case-progress-link">
+            <span class="case-progress-dot"></span>
+            <span class="case-progress-label mono">Reflection</span>
+          </a>
+        </nav>
+
+
+
+  </main>
+
+  <!-- SCRIPT -->
+  <script>
+    const sections = document.querySelectorAll("section[id]");
+    const navLinks = document.querySelectorAll(".case-progress-link");
+
+    // Lógica para Reveal das animações ao descer o scroll
+    const revealElements = document.querySelectorAll(".reveal");
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("is-visible");
+        observer.unobserve(entry.target);
+      });
+    }, {
+      root: null,
+      threshold: 0.15,
+      rootMargin: "0px"
+    });
+
+    revealElements.forEach((el) => {
+      revealObserver.observe(el);
+    });
+
+    const activateNavOnScroll = () => {
+      let currentSection = "";
+
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop - 180;
+
+        if (
+          window.scrollY >= sectionTop &&
+          window.scrollY < sectionTop + section.offsetHeight
+        ) {
+          currentSection = section.getAttribute("id");
+        }
+      });
+
+      const progressNav = document.querySelector(".case-progress-nav");
+      if (progressNav) {
+        if (currentSection === "overview" || currentSection === "") {
+          progressNav.classList.remove("is-visible");
+        } else {
+          progressNav.classList.add("is-visible");
+        }
+      }
+
+      navLinks.forEach((link) => {
+        link.classList.remove("active");
+        link.removeAttribute("aria-current");
+
+        if (link.getAttribute("href") === `#${currentSection}`) {
+          link.classList.add("active");
+          link.setAttribute("aria-current", "true");
+        }
+      });
+
+      const topNav = document.getElementById("nav");
+      if (topNav) {
+        topNav.classList.toggle("scrolled", window.scrollY > 60);
+      }
+    };
+
+    window.addEventListener("scroll", activateNavOnScroll, { passive: true });
+    activateNavOnScroll();
+  </script>
+
+</body>
+
+</html>
