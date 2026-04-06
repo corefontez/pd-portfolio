@@ -409,12 +409,40 @@
                 <div class="ds-token-tag mono mt-2">Design Tokens Generated via AI</div>
               </div>
               <div class="ds-visual-side">
-                <div class="ds-image-grid">
-                  <div class="ds-image-placeholder small">
-                    <span class="placeholder-tag">Image: Style Guide</span>
+                <style>
+                  .ds-tokens-grid {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 12px;
+                  }
+                  .ds-token-swatch {
+                    height: 80px;
+                    border-radius: 12px;
+                    padding: 12px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                    border: 1px solid rgba(255,255,255,0.05);
+                  }
+                  .ds-token-swatch span { font-size: 0.65rem; color: rgba(255,255,255,0.8); }
+                  .ds-token-swatch strong { font-size: 0.75rem; color: #fff; }
+                </style>
+                <div class="ds-tokens-grid">
+                  <div class="ds-token-swatch" style="background: var(--teal-500);">
+                    <span>Primary</span>
+                    <strong>#0F766E</strong>
                   </div>
-                  <div class="ds-image-placeholder small">
-                    <span class="placeholder-tag">Image: Components</span>
+                  <div class="ds-token-swatch" style="background: var(--teal-400);">
+                    <span>Core Bright</span>
+                    <strong>#2DD4BF</strong>
+                  </div>
+                  <div class="ds-token-swatch" style="background: var(--coral-500);">
+                    <span>Accent</span>
+                    <strong>#F43F5E</strong>
+                  </div>
+                  <div class="ds-token-swatch" style="background: var(--bg-card); border-color: var(--teal-dim);">
+                    <span>Surface</span>
+                    <strong>#0D0D0D</strong>
                   </div>
                 </div>
               </div>
@@ -477,12 +505,16 @@
                 </div>
                 <div class="flow-paths mt-4">
                   <div class="flow-path-item mb-4">
-                    <h4 class="mono text-orange" style="font-size: 0.8rem; letter-spacing: 0.05em;">Primary Path</h4>
-                    <p class="text-muted mt-1">Reflects the intended decision-making sequence: <strong>Awareness → Prioritization → Intervention</strong>. The goal was to help nutritionists move from signal → context → action without relying on guesswork.</p>
+                    <h4 class="mono text-accent" style="font-size: 0.8rem; letter-spacing: 0.05em;">Primary Path</h4>
+                    <p class="case-section-subtitle" style="margin-top: 12px; font-size: 0.95rem;">
+                      <strong>Home Dashboard → Smart Alerts → Patient Profile → Follow-up Decision</strong>
+                    </p>
                   </div>
-                  <div class="flow-path-item">
-                    <h4 class="mono text-orange" style="font-size: 0.8rem; letter-spacing: 0.05em;">Secondary Path</h4>
-                    <p class="text-muted mt-1"><strong>Home Dashboard → Flagged patient card → Patient Profile</strong>. Allows users to jump directly into a flagged profile when they already know where they want to investigate.</p>
+                  <div class="solution-column reveal reveal-delay-2">
+                    <div class="solution-header">
+                      <h4 class="mono text-accent" style="font-size: 0.8rem; letter-spacing: 0.05em;">Secondary Path</h4>
+                      <p class="text-muted mt-1"><strong>Home Dashboard → Flagged patient card → Patient Profile</strong>. Allows users to jump directly into a flagged profile when they already know where they want to investigate.</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -696,7 +728,7 @@
                   <li>Stronger recovery of patients who might otherwise drop off</li>
                 </ul>
               </div>
-              <blockquote class="mt-4" style="border-left: 2px solid var(--orange); padding-left: 20px; font-style: italic; font-size: 1.25rem; color: var(--text);">
+              <blockquote class="mt-4" style="border-left: 2px solid var(--accent); padding-left: 20px; font-style: italic; font-size: 1.25rem; color: var(--text);">
                 "More than anything, I’d expect the product to shift the nutritionist’s workflow from reacting late to acting earlier with more confidence."
               </blockquote>
             </div>
