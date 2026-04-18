@@ -9,9 +9,7 @@
   <!-- Fonts: Inter (body/UI) · Helvetica Now (titles — system font) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
   <!-- Styles -->
   <link rel="stylesheet" href="../../style.css" />
@@ -47,6 +45,10 @@
 
   <!-- STICKY PROGRESS NAV -->
   <nav class="case-progress-nav" aria-label="Case study sections">
+    <a href="#context" class="case-progress-link">
+      <span class="case-progress-dot"></span>
+      <span class="case-progress-label mono">Context</span>
+    </a>
     <a href="#problem" class="case-progress-link">
       <span class="case-progress-dot"></span>
       <span class="case-progress-label mono">Problem</span>
@@ -93,7 +95,7 @@
 
       <div class="case-hero-layout">
         <div class="case-hero-copy reveal">
-          <p class="case-eyebrow mono">Product Designer · Case Study</p>
+          <p class="case-eyebrow mono">Case Study</p>
 
           <h1 class="case-title">
             Turning invisible<br />
@@ -103,7 +105,7 @@
 
           <p class="case-description">
             A retention-focused dashboard concept for independent nutritionists,
-            reframed from "analytics screen" to "decision engine."
+            reframed from analytics screen to decision engine.
           </p>
 
           <div class="case-meta-bento">
@@ -116,14 +118,14 @@
               <p>3 weeks</p>
             </div>
             <div class="case-meta-card case-meta-card--wide reveal reveal-delay-3">
-              <span class="case-meta-label mono">Scope</span>
-              <p>Solo concept</p>
+              <span class="case-meta-label mono">Goal</span>
+              <p>Help nutritionists identify churn risk earlier and take action faster</p>
             </div>
           </div>
 
           <a href="https://patient-retention-dashboard.vercel.app/" class="btn-primary reveal reveal-delay-3"
             target="_blank" rel="noopener">
-            Try the Dashboard
+            The Dashboard is coming soon
           </a>
         </div>
 
@@ -136,20 +138,28 @@
 
 
     <!-- ============================================================
-         02. TL;DR — scanning contract
+         02. CONTEXT — scanning contract
          ============================================================ -->
-    <section class="case-section case-tldr" id="tldr">
+    <section class="case-section case-tldr" id="context">
       <div class="case-section-inner">
         <div class="tldr-block reveal">
-          <p class="case-section-eyebrow mono">TL;DR_</p>
+          <p class="case-section-eyebrow mono">Context_</p>
           <div class="tldr-points">
-            <p class="tldr-point">Independent nutrition clinics lose 20–30% of patients to silent drop-off. Existing
-              tools track care delivery well but ignore retention entirely. The data was there — the decisions
+            <p class="tldr-point">Patient dropout is a well-documented challenge in nutrition and weight management
+              programs, with <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11671310/?utm_source=chatgpt.com"
+                target="_blank" rel="noopener">studies</a> reporting attrition rates ranging from 10% to over 80%, often
+              limiting treatment
+              effectiveness.
+              Existing tools track care delivery well but ignore retention entirely. The data was there but the
+              decisions
               weren't.</p>
-            <p class="tldr-point tldr-bet">I reframed the dashboard from "show more data" to "surface fewer, sharper
-              decisions." The product bet: retention is a behavior problem, not a data problem.</p>
-            <p class="tldr-point">The outcome is a three-layer decision flow — Awareness → Prioritization → Action —
-              built around how nutritionists actually scan (30 seconds) and decide (under pressure).</p>
+            <p class="tldr-point tldr-bet">I shifted the dashboard from displaying more data to highlighting fewer, more
+              meaningful decisions.
+              The key hypothesis was that retention is a behavioral challenge, not a data problem.
+            </p>
+            <p class="tldr-point">The outcome is a three-layer decision flow: Awareness → Prioritization → Action,
+              built around how practitioners rapidly scan information and make decisions under time pressure, often with
+              limited attention between sessions, as observed in user research.</p>
           </div>
         </div>
       </div>
@@ -176,7 +186,6 @@
               <li>Track meal plan adherence</li>
             </ul>
           </div>
-          <div class="gap-vs">vs</div>
           <div class="gap-col gap-col--doesnt">
             <p class="gap-label mono">What tools don't do</p>
             <ul class="gap-list">
@@ -190,13 +199,12 @@
         <!-- Result — isolated, not buried -->
         <div class="problem-result reveal">
           <span class="problem-result-label mono">Result</span>
-          <p class="problem-result-text">Nutritionists react too late — when the patient is already gone.</p>
+          <p class="problem-result-text">Nutritionists react too late, when the patient is already gone. This wasn't a
+            visibility problem. It was a framing problem. Data was available but wasn't organized around
+            a decision.</p>
         </div>
 
-        <blockquote class="insight-callout reveal">
-          "This wasn't a visibility problem. It was a framing problem. Data was available but wasn't organized around
-          a decision."
-        </blockquote>
+
 
       </div>
     </section>
@@ -211,22 +219,12 @@
         <div class="case-section-heading reveal">
           <p class="case-section-eyebrow mono">Discovery & Insight_</p>
           <h2 class="case-section-title">Three insights that shaped direction</h2>
+          <p class="case-section-subtitle">Across both global and Brazilian platforms, the pattern is consistent: tools
+            are optimized for managing care, not for deciding how to prevent patient drop-off.</p>
         </div>
-
-        <!-- Research inputs — as credential tags, not body text -->
-        <div class="research-inputs-row reveal">
-          <span class="research-input-tag mono">1 practitioner interview</span>
-          <span class="research-input-tag mono">10+ platforms audited</span>
-          <span class="research-input-tag mono">Heuristic analysis</span>
-          <span class="research-input-tag mono">Behavioral pattern review</span>
-        </div>
-
         <!-- Evidence image — BEFORE the conclusions -->
         <div class="research-artifact reveal">
-          <div class="artifact-image-placeholder">
-            <span class="placeholder-tag">Benchmarking Matrix — 10 platforms scored on care delivery vs. retention
-              visibility</span>
-          </div>
+          <img src="assets/Benchmarking.png" alt="Benchmarking Matrix" class="artifact-image" />
           <p class="diagram-caption">What's well-served vs. what's ignored across nutrition platforms.</p>
         </div>
 
@@ -236,7 +234,7 @@
             <span class="insight-num mono">01.</span>
             <div class="insight-body">
               <h3 class="insight-title">Metrics without meaning don't drive action.</h3>
-              <p class="insight-desc">Dashboards already show numbers. What was missing was the why — the context that
+              <p class="insight-desc">Dashboards already show numbers. What was missing was the context that
                 turns a number into a decision.</p>
             </div>
           </div>
@@ -244,30 +242,21 @@
             <span class="insight-num mono">02.</span>
             <div class="insight-body">
               <h3 class="insight-title">Nutritionists scan. They don't read.</h3>
-              <p class="insight-desc">Retention review gets ~30 seconds of attention between sessions. The IA had to
-                answer three questions in that window — what's urgent, why, what next — or it would be ignored.</p>
+              <p class="insight-desc">Practitioners review patient status in short intervals between sessions, relying
+                on quick scanning rather than deep analysis.</p>
             </div>
           </div>
           <div class="insight-item">
             <span class="insight-num mono">03.</span>
             <div class="insight-body">
               <h3 class="insight-title">Retention shows up as patterns, not scores.</h3>
-              <p class="insight-desc">Disengagement doesn't look like "70% risk." It looks like "missed check-in +
-                declining messages + adherence drop." The product had to surface patterns, not aggregate risk numbers
-                that feel like judgment.</p>
+              <p class="insight-desc">Early disengagement doesn’t appear as a single risk score, it emerges through
+                behavioral patterns over time.</p>
             </div>
           </div>
         </div>
 
-        <!-- Second artifact — visibility gaps map -->
-        <div class="research-artifact reveal">
-          <div class="artifact-image-placeholder">
-            <span class="placeholder-tag">Visibility Gaps Map — Miro synthesis</span>
-          </div>
-          <p class="diagram-caption">Gaps between available data and actionable decisions.</p>
-        </div>
 
-      </div>
     </section>
 
 
@@ -292,12 +281,8 @@
         </div>
 
         <div class="shift-impact reveal">
-          <span class="shift-impact-label mono">This reframed</span>
-          <div class="shift-impact-tags">
-            <span class="shift-impact-tag">Information architecture</span>
-            <span class="shift-impact-tag">Feature scope</span>
-            <span class="shift-impact-tag">Prioritization</span>
-          </div>
+          <p class="shift-impact-text">This shift reframed the entire product approach, from how information was
+            structured to what features were necessary and how decisions were prioritized.</p>
         </div>
 
       </div>
@@ -321,7 +306,7 @@
             <span class="decision-num mono">01</span>
             <div class="decision-body">
               <h3 class="decision-title">Reframe the dashboard as a decision engine, not a report.</h3>
-              <p class="decision-rationale">Most platforms show everything. I chose the opposite: show fewer things,
+              <p class="decision-rationale">Most platforms show everything. I chose the opposite, show fewer things,
                 but rank them by what needs a decision today. This meant cutting generic practice analytics entirely
                 from scope.</p>
             </div>
@@ -331,10 +316,15 @@
             <span class="decision-num mono">02</span>
             <div class="decision-body">
               <h3 class="decision-title">Structure the IA around three decision layers.</h3>
-              <p class="decision-rationale">Awareness — what's happening now (pulse check in &lt;5s) · Prioritization
-                — who needs action first (triage list) · Insight / Action — why, and how to respond (patient-level
-                context). Target: 80% of retention decisions happen in the first two layers. Only escalate to deep
-                context when the practitioner has a specific reason.</p>
+              <div class="decision-rationale">
+                <ul class="decision-bullets">
+                  <li><strong>Awareness:</strong> what's happening now (pulse check in &lt;5s)</li>
+                  <li><strong>Prioritization:</strong> who needs action first (triage list)</li>
+                  <li><strong>Insight / Action:</strong> why, and how to respond (patient-level context)</li>
+                </ul>
+                <p class="decision-meta">Target: 80% of retention decisions happen in the first two layers. Only
+                  escalate to deep context when the practitioner has a specific reason.</p>
+              </div>
             </div>
           </div>
 
@@ -342,7 +332,7 @@
             <span class="decision-num mono">03</span>
             <div class="decision-body">
               <h3 class="decision-title">Surface behavioral patterns, not static scores.</h3>
-              <p class="decision-rationale">The IA shows the signal first, with the score as supporting context — not
+              <p class="decision-rationale">The IA shows the signal first, with the score as supporting context, not
                 the other way around. Evidence builds trust. Judgment erodes it.</p>
               <!-- Contrast block: before vs after -->
               <div class="behavior-contrast">
@@ -402,23 +392,27 @@
               <tr>
                 <td class="td-chose">Retention-only scope</td>
                 <td class="td-cut">Generic practice analytics</td>
-                <td class="col-reasoning">Narrow problem = sharper product. Retention was the underserved gap across the entire market.</td>
+                <td class="col-reasoning">Narrow problem = sharper product. Retention was the underserved gap across the
+                  entire market.</td>
               </tr>
               <tr>
                 <td class="td-chose">Behavioral pattern signals</td>
                 <td class="td-cut">Static risk scores as primary UI</td>
-                <td class="col-reasoning">Patterns feel like evidence; scores feel like judgment. Trust follows evidence.</td>
+                <td class="col-reasoning">Patterns feel like evidence; scores feel like judgment. Trust follows
+                  evidence.</td>
               </tr>
               <tr>
                 <td class="td-chose">AI-suggested actions</td>
                 <td class="td-cut">Full automation</td>
-                <td class="col-reasoning">Healthcare needs practitioner-in-loop. Overconfident automation damages trust faster than it saves
+                <td class="col-reasoning">Healthcare needs practitioner-in-loop. Overconfident automation damages trust
+                  faster than it saves
                   time.</td>
               </tr>
               <tr>
                 <td class="td-chose">Three-layer IA</td>
                 <td class="td-cut">Feature-rich side nav</td>
-                <td class="col-reasoning">Layered flow matches how practitioners actually decide under time pressure.</td>
+                <td class="col-reasoning">Layered flow matches how practitioners actually decide under time pressure.
+                </td>
               </tr>
               <tr>
                 <td class="td-chose">One core task (retention)</td>
@@ -442,8 +436,7 @@
         <div class="case-section-heading reveal">
           <p class="case-section-eyebrow mono">Solution_</p>
           <h2 class="case-section-title">The decisions made visible</h2>
-          <p class="case-section-subtitle">Only the screens that make the product thinking legible. Full flow available
-            on request.</p>
+
         </div>
 
         <div class="screen-blocks">
@@ -457,16 +450,12 @@
               </div>
               <h3 class="screen-title">Home Dashboard</h3>
               <p class="screen-job mono">Job: "What needs my attention today?"</p>
-              <p class="screen-desc">A high-signal pulse check — total patients, % at risk, adherence trend, today's
+              <p class="screen-desc">A high-signal pulse check, total patients, % at risk, adherence trend, today's
                 focus. Stacks by urgency, not chronology. Designed to be understood in under 5 seconds, not studied.
               </p>
             </div>
             <div class="screen-visual">
-              <div class="screen-image-placeholder screen-image-placeholder--large">
-                <span class="placeholder-tag">Home Dashboard</span>
-                <p class="placeholder-caption">Pulse check — what's changing across the patient base, ranked by
-                  urgency.</p>
-              </div>
+              <img src="assets/Screen%2001%20-%20Home.png" alt="Nutria Home Dashboard" class="screen-img" />
             </div>
           </div>
 
@@ -484,11 +473,8 @@
                 the handful that matter this week.</p>
             </div>
             <div class="screen-visual">
-              <div class="screen-image-placeholder">
-                <span class="placeholder-tag">Smart Alerts</span>
-                <p class="placeholder-caption">Triage layer — from 100+ patients to a handful, with the signal
-                  surfaced first.</p>
-              </div>
+              <img src="assets/Screen%2002%20-%20smart%20alerts%20page.png" alt="Smart Alerts Triage"
+                class="screen-img" />
             </div>
           </div>
 
@@ -501,16 +487,13 @@
               </div>
               <h3 class="screen-title">Patient Profile</h3>
               <p class="screen-job mono">Job: "What changed, how serious is it, what should I do?"</p>
-              <p class="screen-desc">A behavioral timeline — not a score card. Shows which behaviors are driving risk
+              <p class="screen-desc">A behavioral timeline, not a score card. Shows which behaviors are driving risk
                 (check-in drop, reduced messaging, adherence plateau, app silence) so the intervention can be matched
                 to the cause.</p>
             </div>
             <div class="screen-visual">
-              <div class="screen-image-placeholder">
-                <span class="placeholder-tag">Patient Profile</span>
-                <p class="placeholder-caption">Risk as a story, not a score — the behaviors driving disengagement over
-                  time.</p>
-              </div>
+              <img src="assets/Screen%2003%20-%20patient%20risk%20profile.png" alt="Patient Risk Profile"
+                class="screen-img" />
             </div>
           </div>
 
@@ -528,10 +511,8 @@
                 what they already know.</p>
             </div>
             <div class="screen-visual">
-              <div class="screen-image-placeholder screen-image-placeholder--wide">
-                <span class="placeholder-tag">Intervention Modal</span>
-                <p class="placeholder-caption">Closing the gap between noticing and doing.</p>
-              </div>
+              <img src="assets/Screen%2004%20-%20Intervention%20Modal.png" alt="Intervention Modal"
+                class="screen-img" />
             </div>
           </div>
 
@@ -611,64 +592,11 @@
 
         </div>
 
-        <div class="kpi-closing reveal">
-          <p>The business signal lives in Layer 3. But without Layer 1, Layer 3 never moves. That's what the dashboard
-            had to earn first.</p>
-        </div>
 
       </div>
     </section>
 
 
-    <!-- ============================================================
-         10. WHAT I'D TEST NEXT + LIMITATIONS (separated registers)
-         ============================================================ -->
-    <section class="case-section case-next" id="next">
-      <div class="case-section-inner">
-
-        <div class="case-section-heading reveal">
-          <p class="case-section-eyebrow mono">What I'd validate next_</p>
-          <h2 class="case-section-title">Honest hypotheses</h2>
-        </div>
-
-        <div class="test-next-list reveal">
-          <div class="test-item">
-            <span class="test-num mono">01</span>
-            <p class="test-body">Does the alert hierarchy actually reduce decision time, or does layering add friction?
-              A/B the flat list vs. the triaged list.</p>
-          </div>
-          <div class="test-item">
-            <span class="test-num mono">02</span>
-            <p class="test-body">Do nutritionists act on AI-suggested interventions, or override them? Override rate is
-              the honest trust signal.</p>
-          </div>
-          <div class="test-item">
-            <span class="test-num mono">03</span>
-            <p class="test-body">Does explainability reduce overconfidence? Risk: clarity that looks authoritative may
-              make practitioners skip verification. Test with a concealed-label variant.</p>
-          </div>
-        </div>
-
-        <div class="test-differently reveal">
-          <p class="test-differently-label mono">What I'd do differently</p>
-          <p class="test-differently-text">Run one diary study with 3–5 nutritionists before design, not alongside it.
-            The workflow assumptions held up in interviews, but I'd rather validate than intuit — especially on the
-            "30-second scan" claim.</p>
-        </div>
-
-        <!-- Limitations — different visual register: honest, quiet -->
-        <div class="limitations-block reveal">
-          <p class="limitations-label mono">⚠ Limitations</p>
-          <ul class="limitations-list">
-            <li>Limited primary research — 1 practitioner interview</li>
-            <li>No live product validation</li>
-            <li>Assumptions based on pattern analysis, not observed behavior</li>
-          </ul>
-          <p class="limitations-next mono">Next step: diary study + real usage data</p>
-        </div>
-
-      </div>
-    </section>
 
 
     <!-- ============================================================
@@ -683,14 +611,16 @@
 
         <div class="reflection-content reveal">
           <div class="reflection-text">
-            <p>The project started as a product gap — independent nutritionists lacked visibility into retention — but
-              quickly became an exercise in decision-making, not interface design.</p>
-            <p>The shift that mattered: I stopped asking "what should this dashboard show?" and started asking "what
-              decision does this enable?" That changed the IA, the flow, and the hierarchy more than any UI choice.</p>
+            <p>What started as a data problem revealed itself as a decision problem.
+
+              The real shift was moving from designing for visibility to designing for action, structuring the product
+              around what needs to be decided, not what can be displayed.
+
+              That change redefined how value is created in the product.</p>
           </div>
 
           <!-- Thesis close — display font size, maximum weight -->
-          <p class="reflection-closer">The skill I'd carry forward to any SaaS or healthcare product: <strong>turning
+          <p>The skill I'd carry forward to any SaaS or healthcare product is to <strong>turn
               invisible signals into clear decisions without adding noise.</strong></p>
         </div>
 
@@ -707,21 +637,15 @@
         <div class="craft-strip reveal">
           <div class="craft-thumb">
             <div class="craft-thumb-image">
-              <span class="placeholder-tag">Design Tokens</span>
+              <img src="assets/Style%20guide.png" alt="Style Guide" class="craft-img craft-img--top" />
             </div>
-            <p class="craft-thumb-label">Orange + Purple design system</p>
+            <p class="craft-thumb-label">Design tokens & style guide</p>
           </div>
           <div class="craft-thumb">
             <div class="craft-thumb-image">
-              <span class="placeholder-tag">Secondary Screens</span>
+              <img src="assets/Components.png" alt="Component Library" class="craft-img craft-img--top" />
             </div>
-            <p class="craft-thumb-label">Full screen inventory</p>
-          </div>
-          <div class="craft-thumb">
-            <div class="craft-thumb-image">
-              <span class="placeholder-tag">Component Library</span>
-            </div>
-            <p class="craft-thumb-label">Modular component set</p>
+            <p class="craft-thumb-label">Modular component library</p>
           </div>
         </div>
       </div>
@@ -765,7 +689,7 @@
 
       const progressNav = document.querySelector(".case-progress-nav");
       if (progressNav) {
-        const hidden = ["overview", "tldr", "context", ""];
+        const hidden = ["overview", ""];
         if (hidden.includes(currentSection)) {
           progressNav.classList.remove("is-visible");
         } else {
